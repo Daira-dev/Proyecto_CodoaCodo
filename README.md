@@ -14,7 +14,7 @@ Este es un proyecto como parte del challenge integrador para el curso de NodeJS 
 - JavaScript
 
 
-#####👨‍💻Integrantes:
+##### 👨‍💻Integrantes:
 
 - Daira	Barreto
 - Cinthia Victoria	Grosso
