@@ -88,3 +88,15 @@ p { /*parrafos*/
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/*------ Estilos generales ------ */
+.full-carousel span img{
+    width: 300px;
+    height: 300px;
+}
+
+.full-carousel span img:hover{
+    transform: scale(1.1);
+    transition: all 0.6s ease-in-out;
+}  
+
