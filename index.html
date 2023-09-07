@@ -8,7 +8,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content="html, css, js, javascript, codo a codo">
-    <link rel="stylesheet" href="./css/styles.css">
 
     <!-- Título-->
     <title> Home │ Funkoshop </title>
@@ -17,7 +16,7 @@
     <script src="https://kit.fontawesome.com/8ee29917fc.js" crossorigin="anonymous"></script>
 
     <!-- CSS -->        
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -28,25 +27,36 @@
     <!-- Encabezado -->
     <header>
         <!--Navbar-->
-        <nav>
-            <picture>
+        <nav class="navbar">
+            <picture class="navbar__logo">
                 <a href="./index.html">
                     <img src="./Assets/Img/branding/logo_light_horizontal.svg" alt="Isotipo de FunkoShop">
                 </a>
             </picture>
 
-            <ul>
-                <li>
-                    <a href="./pages/shop.html">SHOP</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="./pages/shop/shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Funkos</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Remeras</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Llaveros</a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="./pages/contact.html">CONTACT</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/contact.html">CONTACT</a>
                 </li>
-                <li>
-                    <a href="./pages/login.html">LOGIN</a>  
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/admin/login.html">LOGIN</a>  
                 </li>
-                <li>
-                    <a href="./pages/cart.html">
+                <li class="navbar__item">
+                    <a class="navbar__cart" href="./pages/cart.html">
                         <img src="./Assets/Img/icons/cart-icon.svg" alt="Icono del carrito">
                     </a>
                 </li>
@@ -187,11 +197,8 @@
 
 </body>
 
-
-<!----PRUEBA DE PUSH EN MI RAMA-->
-<!-----ACA PROBANDO GIT OLA JASNDKLASLFNALDKSFLZN-->
-
 <!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 </html>
