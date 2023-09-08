@@ -66,15 +66,16 @@ html { /*etiqueta raiz(los demas heredan su comportamiento)*/
     color: var(--dark-solid);
 }
 
-a { /*enlaces-fuentes*/
-    text-decoration: none;
-    font-family: inherit;
-    color: inherit; /*siempre toma el valor heredado*/
-}
+
 
 header, footer{
     font-family: var(--alternative-font);
     color: var(--light-font-solid);
+}
+a { /*enlaces-fuentes*/
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit; /*siempre toma el valor heredado*/
 }
 
 ul, ol { /*listas*/
@@ -122,6 +123,7 @@ header {
     display: inline-block;
     transition: background .3s ease-in-out;
     position: relative;
+    color: var(--light-font-solid);
 }
 
 .navbar__link:hover {
@@ -340,7 +342,20 @@ header {
     font-weight: 500;
 }
 
+/* FOOTER */
 
+.footer {
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-68);
+}
+
+.footer__copy {
+    margin-top: var(--spacing-36);
+    text-align: center;
+}
+
+
+/* ANIMATIONS */
 
 @keyframes fade {
     0% {
