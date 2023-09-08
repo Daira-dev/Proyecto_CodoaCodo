@@ -76,87 +76,93 @@
         </article>
     </section>
     <!---->
-    <main class="container">
+    <main class="main-container">
         <!--Artículos-->
-        <section>
-            <article>
-                <h3>Star Wars & The Mandalorian</h3>
-                <p>Disfruta de una saga que sigue agregando personajes a su colección</p>
-                <a href="./pages/shop">VER COLECCIÓN</a>
+        <section class="collection container">
+            <article class="collection__content">
+                <h3 class="collection__title">Star Wars & The Mandalorian</h3>
+                <p class="collection__text">Disfruta de una saga que sigue agregando personajes a su colección</p>
+                <a class="collection__link" href="./pages/shop">VER COLECCIÓN</a>
             </article>
-            <picture>
+            <picture class="collection__cover">
                 <img src="./Assets/Img/star-wars/baby-yoda-1.webp" alt="FunkoPop de Grogu de la serie The Mandalorian">
             </picture>
         </section>
         
-        <section>
-            <article>
-                <h3>Pokemon Indigo</h3>
-                <p>Atrapa todos los que puedas y disfruta de una colección llena de amigos.</p>
-                <a href="./pages/shop">VER COLECCIÓN</a>
+        <section class="collection container">
+            <article class="collection__content">
+                <h3 class="collection__title">Pokemon Indigo</h3>
+                <p class="collection__text">Atrapa todos los que puedas y disfruta de una colección llena de amigos.</p>
+                <a class="collection__link" href="./pages/shop">VER COLECCIÓN</a>
             </article>
-            <picture>
+            <picture class="collection__cover">
                 <img src="./Assets/Img/pokemon/vulpix-1.webp" alt="FunkoPop de Vulpix de la serie Pokemon">
             </picture>
         </section>
 
-        <section>
-            <article>
-                <h3>Harry Potter</h3>
-                <p>Revive los recuerdos de una saga llena de magia y encanto.</p>
-                <a href="./pages/shop">VER COLECCIÓN</a>
+        <section class="collection container">
+            <article class="collection__content">
+                <h3 class="collection__title">Harry Potter</h3>
+                <p class="collection__text">Revive los recuerdos de una saga llena de magia y encanto.</p>
+                <a class="collection__link" href="./pages/shop">VER COLECCIÓN</a>
             </article>
-            <picture>
+            <picture class="collection__cover">
                 <img src="./Assets/Img/harry-potter/snape-patronus-1.webp" alt="FunkoPop de Patronus Snape de la película Harry Potter">
             </picture>
         </section>
         <!---->
 
         <!--últimos lanzamientos-->
-        <section>
-            <h2>ÚLTIMOS LANZAMIENTOS</h2>
-            <ul>
-                <li>
-                    <article>
-                        <a href="">
-                            <picture>
-                                <img src="./Assets/Img/star-wars/trooper-1.webp" alt="FunkoPop de Trooper de la serie The Mandalorian">
+        <section class="slider container">
+            <h2 class="slider__title">ÚLTIMOS LANZAMIENTOS</h2>
+            <ul class="slider__items">
+                <li class="slider__item">
+                    <article class="card-item">
+                        <a class="card-item__link" href="">
+                            <picture class="card-item__cover">
+                                <span class="card-item__tag">Nuevo</span>
+                                <img class="card-item__img--front" src="./Assets/Img/star-wars/trooper-1.webp" alt="FunkoPop de Trooper de la serie The Mandalorian">
+                                <img class="card-item__img--back" src="./Assets/Img/star-wars/trooper-box.webp" alt="FunkoPop de Trooper de la serie The Mandalorian en caja">
                             </picture>
-                            <div>
-                                <p>STAR WARS</p>
-                                <h4>STORMTROOPER LIGHTSABER</h4>
-                                <p>$ 1799,99</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                            <div class="card-item__content">
+                                <p class="card-item__licence">STAR WARS</p>
+                                <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
+                                <p class="card-item__price">$ 1799,99</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <a href="">
-                            <picture>
-                                <img src="./Assets/Img/pokemon/pidgeotto-1.webp" alt="FunkoPop de Pidgeotto de la serie Pokemon">
+                <li class="slider__item">
+                    <article class="card-item">
+                        <a class="card-item__link" href="">
+                            <picture class="card-item__cover">
+                                <span class="card-item__tag">Nuevo</span>
+                                <img class="card-item__img--front" src="./Assets/Img/pokemon/pidgeotto-1.webp" alt="FunkoPop de Pidgeotto de la serie Pokemon">
+                                <img class="card-item__img--back" src="./Assets/Img/pokemon/pidgeotto-box.webp" alt="FunkoPop de Pidgeotto de la serie Pokemon en caja">
                             </picture>
-                            <div>
-                                <p>POKEMON</p>
-                                <h4>PIDGEOTTO</h4>
-                                <p>$ 1799,99</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                            <div class="card-item__content">
+                                <p class="card-item__licence">POKEMON</p>
+                                <h4 class="card-item__name">PIDGEOTTO</h4>
+                                <p class="card-item__price">$ 1799,99</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <a href="">
-                            <picture>
-                                <img src="./Assets/Img/harry-potter/luna-1.webp" alt="FunkoPop de Luna de la película Harry Potter">
+                <li class="slider__item">
+                    <article class="card-item">
+                        <a class="card-item__link" href="">
+                            <picture class="card-item__cover">
+                                <span class="card-item__tag">Nuevo</span>
+                                <img class="card-item__img--front" src="./Assets/Img/harry-potter/luna-1.webp" alt="FunkoPop de Luna de la película Harry Potter">
+                                <img class="card-item__img--back" src="./Assets/Img/harry-potter/luna-box.webp" alt="FunkoPop de Luna de la película Harry Potter en caja">
                             </picture>
-                            <div>
-                                <p>HARRY POTTER</p>
-                                <h4>LUNA LOVEGOOD LION MASK</h4>
-                                <p>$ 1799,99</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                            <div class="card-item__content">
+                                <p class="card-item__licence">HARRY POTTER</p>
+                                <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4>
+                                <p class="card-item__price">$ 1799,99</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
