@@ -74,9 +74,10 @@ html{
 
 }
 
+
+
 a{
     text-decoration: none;
-    font-size: 2em;
     font-family: var(--alternative-font);
     color: inherit;
 }
@@ -93,11 +94,47 @@ p{
     font-size: 1.8em;
 }
 
+img{
+    width: 100%;
+    
+}
+
 .container{
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.whit-icon{
+    display: flex;
+    align-items: center;
+}
+
+
+/*HEADER*/
 header{
-    background-color: #30343F;
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-36);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-20);
+}
+
+.navbar__link{
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block;
+    transition: background .3s ease-in-out;
+
+}
+
+.navbar__link:hover{
+    background-color: var(--primary-900);
 }
