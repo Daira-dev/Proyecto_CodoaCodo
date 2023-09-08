@@ -66,16 +66,15 @@ html { /*etiqueta raiz(los demas heredan su comportamiento)*/
     color: var(--dark-solid);
 }
 
-
-
-header, footer{
-    font-family: var(--alternative-font);
-    color: var(--light-font-solid);
-}
 a { /*enlaces-fuentes*/
     text-decoration: none;
     font-family: inherit;
     color: inherit; /*siempre toma el valor heredado*/
+}
+
+header, footer{
+    font-family: var(--alternative-font);
+    color: var(--light-font-solid);
 }
 
 ul, ol { /*listas*/
