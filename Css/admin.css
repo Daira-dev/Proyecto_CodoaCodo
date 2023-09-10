@@ -164,9 +164,46 @@ footer .navbar__link:hover {
 
 
 
-/*------ ESTILOS DE ADMIN ------*/
+/*------ ESTILOS MAIN DE ADMIN ------*/
 
+.container_tabla {
+    font-family: var(--base-font);
+    font-size: 2.4em;
+    font-weight: 500;
+}
 
+.buscador {
+    margin-top: var(--spacing-16);
+}
+
+.buscador__input {
+    width: 530px;
+    height: 41px;
+}
+
+.titulo__tabla {
+    padding: var(--spacing-16);
+}
+
+.titulo__tabla h1 {
+    font-family: var(--alternative-font);
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.btn__add {
+    padding-right: var(--spacing-20);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+table {
+    max-width: 1090px;
+}
+
+.container_tabla {
+    margin-bottom: var(--spacing-24);
+}
 
 
 /*------ ANIMATIONS ------*/
