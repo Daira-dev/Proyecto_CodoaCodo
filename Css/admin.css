@@ -71,7 +71,7 @@ html { /*etiqueta raiz(los demas heredan su comportamiento)*/
 }
 
 li a { /*enlaces-fuentes*/
-    text-decoration: none;
+    text-decoration: none; 
     font-family: inherit;
     font-size: 2em;
     color: inherit; /*siempre toma el valor heredado*/
@@ -173,20 +173,19 @@ footer .navbar__link:hover {
 }
 
 .buscador {
-    margin: var(--spacing-36) 0;
+    margin: var(--spacing-28) 0;
 }
 
 #search {
     border-radius: 6px;
     border: 2px solid var(--dark-bg-solid);
     width: 520px;
-    height: 44px;
+    height: 45px;
+    padding-left: 15px;
+    font-size: 2em;
 }
 
 #search::placeholder {
-    display: flex;
-    padding: 20px;
-    font-size: 2em;
     color: #b9b9b9;
 }
 
