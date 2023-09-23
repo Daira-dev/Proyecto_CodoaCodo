@@ -179,19 +179,21 @@ header{
 
 
 /*CARRUSEL*/
-
-.full_carousel {
-    display: grid;
-    justify-content: space-between;
-    margin: var(--spacing-20);
-    grid-template-columns: 20px 20px 20px ;
-}  
-
+.container_main {
+    margin-top: var(--spacing-68);
+    display: flex;
+}
 
 
 /*CARDS*/
 .slider__items {
-    width: 300px;
+    display: grid;
+    gap: var(--spacing-24);
+    grid-template-columns: repeat(3, 30%);
+}
+
+.slider__item {
+    width: 30em;
 }
 
 .card-item__cover{
@@ -249,9 +251,6 @@ header{
 }
 
 .card-item__promo{
-    width: 36px;
-    height: 34px;
-    font-family: var(--alternative-font);
     font-size: var(--font-xsmall);
     color: var(--secondary-solid);
     font-weight: 700;
