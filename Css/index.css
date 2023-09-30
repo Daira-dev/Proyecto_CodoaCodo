@@ -84,19 +84,20 @@ a{
 
 
 header, footer{
-    font-family: var(--alternative-font) ;
+    font-family: var(--alternative-font);
     color: var(--ligth-font-solid);
 }
+
 ul, ol {
     list-style-type: none;
 }
+
 p{
     font-size: 1.8em;
 }
 
 img{
     width: 100%;
-    
 }
 
 .container{
@@ -121,7 +122,6 @@ header{
 
 .navbar__logo{
     max-width: 300px;
-
 }
 
 .navbar__menu{
@@ -131,69 +131,54 @@ header{
 }
 
 .navbar__link{
+    position: relative;
     font-size: var(--font-medium);
     padding: var(--spacing-8) var(--spacing-16);
     display: inline-block;
-    transition: background .3s ease-in-out;
-    position: relative;
-
+    transition: .3s ease-in-out;
 }
 
 .navbar__link:hover{
     background-color: var(--primary-900);
 }
 
-.whit-icon{
+.with-icon{
     display: flex;
     align-items: center;
     gap: var(--spacing-8);
 }
-.whit-submenu:hover .submenu{
-    display:block;
 
+.with-submenu:hover .submenu{
+    display: block;
 }
 
-.submenu{
+.submenu {
     display: none;
-    width: 300px;
     position: absolute;
+    width: 300px;
     background-color: var(--dark-bg-solid);
-    z-index: 3;
-    
 }
 
-.submenu__link{
+.submenu__link {
     display: block;
     padding: var(--spacing-8) var(--spacing-16);
     font-size: var(--font-medium);
     transition: background .3s ease-in-out;
 }
-.submenu__link:hover{
+
+.submenu__link:hover {
     background-color: var(--primary-900);
 }
 
 
-/*hero*/
 
+/*hero*/
 .hero{
     background-image: url(../Assets/Img/funkos-banner.webp);
     padding: var(--spacing-128);
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
-    position: relative;
-
-}
-
-.hero::before{
-    content: '';
-    background-color: rgba(0, 0, 0, 0);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backdrop-filter: blur(2px) brightness(.9);
 }
 
 .hero__content{
@@ -278,7 +263,7 @@ header{
     padding: var(--spacing-16) var(--spacing-36);
     border-radius: 50px;
     font-weight: 500;
-    transition: background .3s ease-in-out;
+    transition: .3s ease-in-out;
 
 }
 

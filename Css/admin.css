@@ -81,6 +81,10 @@ p { /*parrafos*/
     font-size: 1.8em;
 }
 
+form {
+    font-size: var(--font-large);
+}
+
 header, footer{
     font-family: var(--alternative-font);
     background-color: var(--dark-bg-solid);
@@ -168,7 +172,7 @@ footer .navbar__link:hover {
 
 .container_tabla {
     font-family: var(--base-font);
-    font-size: 2.4em;
+    font-size: var(--font-large);
     font-weight: 500;
 }
 
@@ -191,16 +195,18 @@ footer .navbar__link:hover {
 
 
 .btn__add {
+    font-family: var(--base-font);
     padding-right: var(--spacing-20);
     font-size: 24px;
     font-weight: 700;
 }
 
-.titulo__tabla h1 {
+.titulo {
     font-family: var(--alternative-font);
-    font-size: 42px;
+    font-size: 4.2em;
     font-weight: 700;
 }
+
 
 .container_tabla {
     margin: var(--spacing-24);
@@ -217,6 +223,87 @@ table {
 table img {
     width: 32px;
 }
+
+
+
+
+
+
+
+
+
+
+/*------ ESTILOS MAIN DE REGISTER ------*/
+
+.container_log {
+    color: var(--dark-solid);
+    margin: var(--spacing-36) 0;
+}
+
+#subtitulo {
+    font-family: var(--alternative-font);
+    font-size: 3.2em;
+    margin: var(--spacing-36) 0;
+}
+
+
+.formulario {
+    font-family: var(--base-font);
+    margin: auto;
+    width: 457px;
+    height: 450px;
+}
+
+
+label {
+    float: left;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    clear: left;
+}
+
+input {
+    float: right;
+    border: none;
+    border-bottom: 2px solid var(--primary-solid);
+    font-size: 16px !important; 
+    padding: 5px 0;
+    width: 210px;
+    transition: border-color 0.3s;
+    &:focus,
+    &:hover {
+      border-color: #03a9f4;
+      outline: 0;
+    }
+}
+
+.btn_1 {
+    display: flex;  
+    position: initial;  
+    color: var(--light-font-solid);
+    font-size: 14px;
+    background-color: var(--primary-solid);
+    border: none;
+}
+
+
+
+
+
+
+/*------ SCROLLBAR ------*/
+body::-webkit-scrollbar{
+    background-color: var(--dark-bg-solid);
+    width: 10px;
+    opacity: 0;
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(120deg, var(--primary-solid), var(--primary-solid));
+    border-radius: 5px;
+}
+
 
 
 /*------ ANIMATIONS ------*/

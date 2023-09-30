@@ -305,3 +305,14 @@ header{
     margin-top: var(--spacing-36);
     text-align: center;
 }
+
+
+/*animation*/
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
