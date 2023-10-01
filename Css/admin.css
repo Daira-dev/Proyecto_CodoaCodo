@@ -81,10 +81,6 @@ p { /*parrafos*/
     font-size: 1.8em;
 }
 
-form {
-    font-size: var(--font-large);
-}
-
 header, footer{
     font-family: var(--alternative-font);
     background-color: var(--dark-bg-solid);
@@ -145,26 +141,6 @@ header {
 }
 
 
-/*------ FOOTER ------*/
-
-footer {
-    padding: var(--spacing-68);
-    padding-bottom: 10px;
-}
-
-footer .navbar__link {
-    padding: 3px;
-}
-
-footer .navbar__link:hover {
-    background-color: var(--dark-bg-solid);
-    color: var(--primary-solid);
-}
-
-.footer__copy {
-    margin-top: var(--spacing-36);
-    text-align: center;
-}
 
 
 
@@ -251,11 +227,11 @@ table img {
     font-family: var(--base-font);
     margin: auto;
     width: 457px;
-    height: 450px;
+    height: 330px;
 }
 
 
-label {
+form label {
     float: left;
     font-size: 24px;
     font-weight: 500;
@@ -264,7 +240,7 @@ label {
     clear: left;
 }
 
-input {
+form input {
     float: right;
     border: none;
     border-bottom: 2px solid var(--primary-solid);
@@ -279,15 +255,54 @@ input {
     }
 }
 
-.btn_1 {
-    display: flex;  
-    position: initial;  
-    color: var(--light-font-solid);
-    font-size: 14px;
+
+.btn_registro {
+    margin-right: var(--spacing-36);
     background-color: var(--primary-solid);
+    color: white;
+    font-size: 16px;
+    padding: 10px 25px;
     border: none;
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(0.8);
+    }
 }
 
+.acepto_terminos {
+    font-size: 18px;
+}
+
+.terminos_condiciones {
+    color: var(--secondary-solid);
+}
+
+
+
+
+/*------ FOOTER ------*/
+
+footer {
+    padding: var(--spacing-68);
+    padding-bottom: 10px;
+}
+
+footer .navbar__link {
+    padding: 3px;
+}
+
+footer .navbar__link:hover {
+    background-color: var(--dark-bg-solid);
+    color: var(--primary-solid);
+}
+
+.footer__copy {
+    margin-top: var(--spacing-36);
+    text-align: center;
+}
 
 
 
