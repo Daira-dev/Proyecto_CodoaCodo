@@ -107,6 +107,8 @@ a{
 
 /*HEADER*/
 
+
+/*HEADER*/
 header{
     background-color: var(--dark-bg-solid);
     padding: var(--spacing-36);
@@ -118,12 +120,8 @@ header{
     align-items: center;
 }
 
-.navbar a {
-    font-family: var(--alternative-font);
-}
 .navbar__logo{
     max-width: 300px;
-
 }
 
 .navbar__menu{
@@ -133,46 +131,46 @@ header{
 }
 
 .navbar__link{
+    position: relative;
     font-size: var(--font-medium);
     padding: var(--spacing-8) var(--spacing-16);
     display: inline-block;
     transition: .3s ease-in-out;
-    position: relative;
-
 }
 
 .navbar__link:hover{
     background-color: var(--primary-900);
 }
 
-.whit-icon{
+.with-icon{
     display: flex;
     align-items: center;
     gap: var(--spacing-8);
 }
-.whit-submenu:hover .submenu{
-    display:block;
 
+.with-submenu:hover .submenu{
+    display: block;
 }
 
-.submenu{
+.submenu {
     display: none;
-    width: 300px;
     position: absolute;
+    width: 300px;
     background-color: var(--dark-bg-solid);
-    z-index: 3;
-    
 }
 
-.submenu__link{
+.submenu__link {
     display: block;
     padding: var(--spacing-8) var(--spacing-16);
     font-size: var(--font-medium);
-    transition: .3s ease-in-out;
+    transition: background .3s ease-in-out;
 }
-.submenu__link:hover{
+
+.submenu__link:hover {
     background-color: var(--primary-900);
 }
+
+
 
 
 

@@ -231,7 +231,7 @@ table img {
 }
 
 
-form label {
+.formulario label {
     float: left;
     font-size: 24px;
     font-weight: 500;
@@ -240,7 +240,7 @@ form label {
     clear: left;
 }
 
-form input {
+.formulario input {
     float: right;
     border: none;
     border-bottom: 2px solid var(--primary-solid);
@@ -281,6 +281,14 @@ form input {
 }
 
 
+
+
+
+/*------ ESTILOS MAIN DE EDIT ------*/
+
+.input_txt {
+
+}
 
 
 /*------ FOOTER ------*/

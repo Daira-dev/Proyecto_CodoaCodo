@@ -1,6 +1,7 @@
-let variable1 = 'Hola'
+console.log("hola")
 
-let variable2 = 20
+setTimeout(() => { 
+    console.log("estoy en el medio")
+}, 2000);
 
-
-variable2 = 2*20
+console.log("mundo")
