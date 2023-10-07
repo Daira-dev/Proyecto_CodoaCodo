@@ -10,7 +10,7 @@
     <meta name="keywords" content="html, css, js, javascript, codo a codo">
 
     <!-- Título-->
-    <title> Home │ Funkoshop </title>
+    <title> Edit │ Funkoshop </title>
     
     <!--Íconos-->
     <script src="https://kit.fontawesome.com/8ee29917fc.js" crossorigin="anonymous"></script>
@@ -53,33 +53,84 @@
 
 
     <!-- Contenido -->
-    <main class="container">
+    <main class="container container_edit min-vh-1005">
+
+      <div class="my-5 w-75">
         
         <h1 class="titulo">EDITAR ITEM</h1>
 
-        <div>
-            <label for="categoria">Categoría:</label>
-            <select>
-                <option value="figura">Funkos</option>
-                <option value="llaveros">Llaveros</option>
-                <option value="remeras">Remeras</option>
-            </select>
-        </div>
+        <form class="row gap-0 row-gap-3">
 
-        <div>
-            <label for="categoria">Licencia:</label>
-            <select>
+          <div class="col-12 d-flex mt-5">
+            <div class="col-5 d-flex align-items-center selector">
+              <label class="fs-1" for="categoria">Categoría:</label>
+              <select id="categoria" name="categoria" class="form-select ms-3 border-2">
+                  <option value="figura">Funkos</option>
+                  <option value="llaveros">Llaveros</option>
+                  <option value="remeras">Remeras</option>
+              </select>
+            </div>
+  
+            <div class="col-5 d-flex align-items-center selector">
+              <label class="fs-1 ms-5" for="licencia">Licencia:</label>
+              <select id="licencia" name="licencia" class="form-select ms-3 border-2">
                 <option value="narutoshippuden">Naruto Shippuden</option>
                 <option value="pokemon">Pokemon</option>
                 <option value="harrypotter">Harry Potter</option>
                 <option value="starwars">Star Wars</option>
-            </select>
-        </div>
+              </select>
+            </div>
+          </div>
+  
+          <div class="col-12 input_txt mt-4">
+              <label for="nombre">Nombre del producto:</label>
+              <input type="text" id="nombre" name="nombre">
+          </div>
 
-        <div class="input_txt">
-            <label>Nombre del producto:</label>
-            <input type="text" placeholder="Kakashi Hatake Shippuden">
-        </div>
+          <textarea id="descripcion" name="descripcion" rows="5" cols="90" required></textarea><br>
+
+          <div class="input_txt_2 col-3 mt-3">
+            <label for="sku">SKU:</label>
+            <input type="text" id="sku" oninput="ajustarTamaño(this)" name="sku">
+          </div>
+          <div class="input_txt_2 col-3 mt-3">
+            <label for="precio">Precio:</label>
+            <input type="text" id="precio" oninput="ajustarTamaño(this)" name="precio">
+          </div>
+          <div class="input_txt_2 col-3 mt-3">
+            <label for="stock">Stock:</label>
+            <input class="text-center input_txt_3" type="text" id="stock" oninput="ajustarTamaño(this)" name="stock">
+          </div>
+
+          <div class="col-12 d-flex mt-4">
+            <div class="col-3 input_txt_2">
+              <label for="descuento">Descuento:</label>
+              <input class="text-center input_txt_3" type="text" id="descuento" oninput="ajustarTamaño(this)" name="descuento">  
+            </div>
+          
+            <div class="col-5 d-flex align-items-center mb-4 selector">
+              <label for="cuotas">Cuotas:</label>
+              <select id="cuotas" name="cuotas" class="form-select ms-3 border-2">
+                <option value="3cuotas">3 Cuotas sin interes</option>
+                <option value="6cuotas">6 Cuotas sin interes</option>
+                <option value="12cuotas">12 Cuotas sin interes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-12 img_producto d-flex align-items-center">
+            <label for="imagenes">Imágenes:</label>
+            <input class="mx-3 m-4" type="submit" id="imagenes" value="Elegir archivos">
+            <small>No se ha seleccionado ningún archivo</small>
+          </div>
+
+          <div class="col-12 mt-4">
+              <input class="btn_1" type="submit" value="Modificar producto">
+          </div>
+
+        </form>
+      </div>
+
         
 
 
