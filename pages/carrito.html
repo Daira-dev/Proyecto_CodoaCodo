@@ -94,16 +94,16 @@
                             <p class="cart-item__price">precio x unidad: $1799,99</p>
                         </div>
                     </article>
-                    <div class="cart-cantidad">
-                        <div class="cart-cantidad__estilos">
-                            <input type="number" id="cantidad" name="cantidad" min="1" max="10">
-                        </div>
-                    </div>
+                    <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
+                        <button id="subtract" class="item__quantity" type="button">-</button>
+                        <input id="quantity" class="item__input" type="text" name="quantity" placeholder="0">
+                        <button id="add" class="item__quantity" type="button">+</button>
+                    </form>
                     <div class="cart-price">
                         <h5>$ 3599,98</h5>
                     </div>
                     <div class="cart-remove">
-                        <img src="../../Assets/Img/icons/close-icon.svg" alt="Icono de eliminar">
+                        <img class="delete-button" src="../../Assets/Img/icons/close-icon.svg" alt="Icono de eliminar" data-item-id="1">
                     </div>
                 </li>
                 <!-- ---------------------------------- -->
@@ -120,16 +120,16 @@
                             <p class="cart-item__price">precio x unidad: $1799,99</p>
                         </div>
                     </article>
-                    <div class="cart-cantidad">
-                        <div class="cart-cantidad__estilos">
-                            <input type="number" id="cantidad" name="cantidad" min="1" max="10">
-                        </div>
-                    </div>
+                    <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
+                        <button id="subtract" class="item__quantity" type="button">-</button>
+                        <input id="quantity" class="item__input" type="text" name="quantity" placeholder="0">
+                        <button id="add" class="item__quantity" type="button">+</button>
+                    </form>
                     <div class="cart-price">
                         <h5>$ 1799,99</h5>
                     </div>
                     <div class="cart-remove">
-                        <a><img src="../../Assets/Img/icons/close-icon.svg" alt="Icono de eliminar"></a>
+                        <a><img  src="../../Assets/Img/icons/close-icon.svg" alt="Icono de eliminar"></a>
                     </div>
                 </li>
 
@@ -192,5 +192,6 @@
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="../js/carrito.js"></script>
 
 </html>
