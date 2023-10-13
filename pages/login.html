@@ -2,67 +2,69 @@
 <html lang="en">
   <head>
     <!--Inf meta-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="html, css, js, javascript, codo a codo">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="html, css, js, javascript, codo a codo" />
 
     <!-- Título-->
-    <title> Login │ Funkoshop </title>
+    <title>Home │ Funkoshop</title>
 
     <!--Íconos-->
-    <script src="https://kit.fontawesome.com/8ee29917fc.js"
-    crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/8ee29917fc.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../Css/admin.css">
-    <link rel="stylesheet" href="../Css/styles.css">
-    
+    <link rel="stylesheet" href="../Css/styles-Login.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous">
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
     <!-- Encabezado -->
-    <header>
-      <nav class="container navbar">
-        <!---->
-          <picture class="navbar__logo">
-              <a href="">
-                  <img src="../Assets/Img/branding/logo_light_horizontal.svg" alt="isologo funkos shops">
-              </a>
-          </picture>
+    <header class="header">
+      <!--Navbar-->
+      <nav class="navbar">
+        <picture class="navbar__logo">
+          <a href="./index.html">
+            <img
+              src="../Assets/Img/branding/logo_light_horizontal.svg"
+              alt="Isotipo de FunkoShop"
+            />
+          </a>
+        </picture>
 
-          <ul class="navbar__menu">
-              <li class="navbar__item">
-                <a class="navbar__link" href="shop.html">VER TIENDA</a>
-              </li>
-              <li class="navbar__item">
-                <a class="navbar__link" href="admin.html">ADMIN</a>
-              </li>
-              <li class="navbar__item">
-                <a class="navbar__link" href="index.html">SALIR<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
-              </li>
-          </ul>
-          <!---->
+        <ul class="navbar__menu">
+          <li class="navbar__links">
+            <a style="font-size: 25px;" href="./pages/shop.html">VER TIENDA</a>
+          </li>
+          <li class="navbar__links">
+            <a style="font-size: 25px;" href="./pages/contact.html">ADMIN</a>
+          </li>
+          <li class="navbar__links">
+            <a style="font-size: 25px;" href="./pages/login.html">SALIR</a>
+          </li>
+        </ul>
       </nav>
+      <!---->
     </header>
-    <!-- Fin del Encabezado -->
-
     <main class="container my-5">
-      <h1 class="text-center titulo my-5">INGRESAR A MI CUENTA</h1>
-      <div class="formulario justify-content-center">
+      <h1 class="titulo">INGRESAR A MI CUENTA</h1>
+      <div class="formulario">
         <form>
           <label>Email:</label>
-          <input type="text" placeholder="maxpower@correo.com">
-          <br>
+          <input type="text" placeholder="johndoe@correo.com" />
           <label>Contraseña:</label>
-          <input type="password" placeholder="•••••••••">
+          <input type="password" placeholder="•••••••••" />
         </form>
       </div>
       <div class="text-center">
@@ -74,40 +76,36 @@
         <p class="sub_text"><a href="./pages/login.html">Olvidé mi contraseña</a></p>
       </div>
     </main>
-    
     <!-- Pie de página -->
-    <footer>
-      <!---->
+    <footer class="footer">
       <section>
-          <nav class="navbar container">
-              <ul class="navbar__item">
-                  <li class="navbar__item">
-                    <a class="navbar__link" href="shop.html">SHOP</a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__link" href="register.html">REGISTRARSE</a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__link" href="login.html">INGRESAR</a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__link" href="contact.html">CONTACTO</a>
-                  </li>
-              </ul> 
-              <picture>
-                  <img src="../Assets/Img/branding/isotype.svg" alt="Isotipo de la marca Funko Shop">
-              </picture>
-          </nav>
+        <nav class="navbar container">
+          <ul>
+            <li>
+              <a style="font-size: 25px;" href="./pages/shop.html">SHOP</a>
+            </li>
+            <li>
+              <a style="font-size: 25px;" href="./pages/register.html">REGISTRARSE</a>
+            </li>
+            <li>
+              <a style="font-size: 25px;" href="./pages/login.html">INGRESAR</a>
+            </li>
+            <li>
+              <a style="font-size: 25px;" href="./pages/contact.html">CONTACTO</a>
+            </li>
+          </ul>
+          <picture>
+            <img
+              src="../Assets/Img/branding/isotype.svg"
+              alt="Isotipo de FunkoShop"
+            />
+          </picture>
+        </nav>
       </section>
-
-      <p class="footer__copy">All rights reserved 2023 - Funkshop & copy;</p>
-      <!---->
-    </footer>  
+      <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
     <!-- Fin de pie de página -->
-
-
   </body>
-
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
