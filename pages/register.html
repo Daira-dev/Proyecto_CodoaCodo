@@ -10,13 +10,13 @@
     <meta name="keywords" content="html, css, js, javascript, codo a codo">
 
     <!-- Título-->
-    <title> Home │ Funkoshop </title>
+    <title> Registrarse │ Funkoshop </title>
     
     <!--Íconos-->
     <script src="https://kit.fontawesome.com/8ee29917fc.js" crossorigin="anonymous"></script>
 
     <!-- CSS -->        
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../Css/admin.css">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -24,74 +24,102 @@
 
 
 <body>
+
     <!-- Encabezado -->
     <header>
-        <!--Navbar-->
-        <nav>
-            <picture>
-                <a href="./index.html">
-                    <img src="./Assets/Img/branding/logo_light_horizontal.svg" alt="Isotipo de FunkoShop">
-                </a>
-            </picture>
-
-            <ul>
-                <li>
-                    <a href="./pages/shop.html">SHOP</a>
-                </li>
-                <li>
-                    <a href="./pages/contact.html">CONTACT</a>
-                </li>
-                <li>
-                    <a href="./pages/login.html">LOGIN</a>  
-                </li>
-                <li>
-                    <a href="./pages/cart.html">
-                        <img src="./Assets/Img/icons/cart-icon.svg" alt="Icono del carrito">
-                    </a>
-                </li>
-            </ul>
-        </nav>
+      <nav class="container navbar">
         <!---->
+          <picture class="navbar__logo">
+              <a href="../index.html">
+                  <img src="../Assets/Img/branding/logo_light_horizontal.svg" alt="isologo funkos shops">
+              </a>
+          </picture>
+
+          <ul class="navbar__menu">
+              <li class="navbar__item">
+                <a class="navbar__link" href="./shop.html">VER TIENDA</a>
+              </li>
+              <li class="navbar__item">
+                <a class="navbar__link" href="./admin.html">ADMIN</a>
+              </li>
+              <li class="navbar__item">
+                <a class="navbar__link" href="../index.html">SALIR<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
+              </li>
+          </ul>
+          <!---->
+      </nav>
     </header>
     <!-- Fin del Encabezado -->
 
+
     <!-- Contenido -->
-    <main>
-        TRABAJEN DESDE AQUI
-        RECUERDEN NO TOCAR EL NAVBAR / FOOTER
+    <main class="container my-5">
+
+      <h1 class="text-center titulo">CREA TU CUENTA</h1>
+      <h2 class="text-center" id="subtitulo">Completa el formulario para ser parte del mundo de los Funkos</h2>
+
+      <div class="formulario">
+        <form>
+          <label>Nombre:</label>
+          <input type="text" placeholder="Max">
+          <label>Apellido:</label>
+          <input type="text" placeholder="Power">
+          <label>Email:</label>
+          <input type="email" placeholder="maxpower@correo.com">
+          <label>Contraseña:</label>
+          <input type="password" placeholder="•••••••••">
+          <label>Repetir Contraseña:</label>
+          <input type="password" placeholder="•••••••••">  
+        </form>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn_1">Registrar</button>
+        <label class="acepto_terminos">
+          <input type="checkbox" name="acepto-terminos" value="si">
+          Acepto <span class="terminos_condiciones">Términos y Condiciones</span>
+        </label>
+      </div>    
+      
     </main>
     <!-- Fin del Contenido -->
 
     <!-- Pie de página -->
     <footer>
-        <section>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="./pages/shop.html">HOME</a>
-                    </li>
-                    <li>
-                        <a href="./pages/register.html">REGISTRARSE</a>
-                    </li>
-                    <li>
-                        <a href="./pages/login.html">LOGIN</a>
-                    </li>
-                    <li>
-                        <a href="./pages/contact.html">CONTACTO</a>
-                    </li>
-                </ul>
-                <picture>
-                    <img src="./Assets/Img/branding/isotype.svg" alt="Isotipo de FunkoShop">
-                </picture>
-            </nav>
-        </section>
-        <p>All rights reserved 2023 - Funkoshop &copy;</p>
+      <!---->
+      <section>
+          <nav class="navbar container">
+              <ul class="navbar__item">
+                  <li class="navbar__item">
+                    <a class="navbar__link" href="./shop.html">SHOP</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a class="navbar__link" href="./register">REGISTRARSE</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a class="navbar__link" href="./login.html">LOGIN</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a class="navbar__link" href="./contact.html">CONTACTO</a>
+                  </li>
+              </ul> 
+              <picture>
+                  <img src="../Assets/Img/branding/isotype.svg" alt="Isotipo de la marca Funko Shop">
+              </picture>
+          </nav>
+      </section>
+
+      <p class="footer__copy">All rights reserved 2023 - Funkshop & copy;</p>
+      <!---->
     </footer>  
     <!-- Fin de pie de página -->
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../Js/index.js"></script>
+
+
 </body>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 </html>
