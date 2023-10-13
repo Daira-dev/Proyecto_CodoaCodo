@@ -136,6 +136,7 @@ header{
     display: inline-block;
     transition: background .3s ease-in-out;
     position: relative;
+    color: var(--ligth-font-solid)
 
 }
 
@@ -148,7 +149,7 @@ header{
     align-items: center;
     gap: var(--spacing-8);
 }
-.whit-submenu:hover .submenu{
+.with-submenu:hover .submenu{
     display:block;
 
 }
@@ -161,6 +162,7 @@ header{
     z-index: 3;
     
 }
+
 
 .submenu__link{
     display: block;
