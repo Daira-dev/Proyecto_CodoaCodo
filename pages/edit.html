@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Inf meta-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="html, css, js, javascript, codo a codo">
+
+    <!-- Título-->
+    <title> Edit │ Funkoshop </title>
+    
+    <!--Íconos-->
+    <script src="https://kit.fontawesome.com/8ee29917fc.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->        
+    <link rel="stylesheet" href="../Css/admin.css">
+    <link rel="stylesheet" href="../Css/styles.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+      <nav class="container navbar">
+        <!---->
+          <picture class="navbar__logo">
+              <a href="../index.html">
+                  <img src="../Assets/Img/branding/logo_light_horizontal.svg" alt="isologo funkos shops">
+              </a>
+          </picture>
+
+          <ul class="navbar__menu">
+              <li class="navbar__item">
+                <a class="navbar__link" href="shop.html">VER TIENDA</a>
+              </li>
+              <li class="navbar__item">
+                <a class="navbar__link" href="admin.html">ADMIN</a>
+              </li>
+              <li class="navbar__item">
+                <a class="navbar__link" href="index.html">SALIR<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
+              </li>
+          </ul>
+          <!---->
+      </nav>
+    </header>
+    <!-- Fin del Encabezado -->
+
+
+    <!-- Contenido -->
+    <main class="container container_edit min-vh-1005">
+
+      <div class="my-5 w-75">
+        
+        <h1 class="titulo">EDITAR ITEM</h1>
+
+        <form class="row gap-0 row-gap-3">
+
+          <div class="col-12 d-flex mt-5">
+            <div class="col-5 d-flex align-items-center selector">
+              <label for="categoria">Categoría:</label>
+              <select id="categoria" name="categoria" class="form-select ms-3 border-2">
+                  <option value="figura">Funkos</option>
+                  <option value="llaveros">Llaveros</option>
+                  <option value="remeras">Remeras</option>
+              </select>
+            </div>
+  
+            <div class="col-5 d-flex align-items-center selector">
+              <label class="ms-5" for="licencia">Licencia:</label>
+              <select id="licencia" name="licencia" class="form-select ms-3 border-2">
+                <option value="pokemon">Pokemon</option>
+                <option value="harrypotter">Harry Potter</option>
+                <option value="starwars">Star Wars</option>
+                <option value="narutoshippuden">Naruto Shippuden</option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="col-12 input_txt mt-4">
+              <label for="nombre">Nombre del producto:</label>
+              <input type="text" id="nombre" name="nombre">
+          </div>
+
+          <textarea id="descripcion" name="descripcion" rows="5" cols="90" required></textarea><br>
+
+          <div class="input_txt_2 col-3 mt-3">
+            <label for="sku">SKU:</label>
+            <input type="text" id="sku" oninput="ajustarTamaño(this)" name="sku">
+          </div>
+          <div class="input_txt_2 col-3 mt-3">
+            <label for="precio">Precio:</label>
+            <input type="text" id="precio" oninput="ajustarTamaño(this)" name="precio">
+          </div>
+          <div class="input_txt_2 col-3 mt-3">
+            <label for="stock">Stock:</label>
+            <input class="text-center input_txt_3" type="text" id="stock" oninput="ajustarTamaño(this)" name="stock">
+          </div>
+
+          <div class="col-12 d-flex mt-4">
+            <div class="col-3 input_txt_2">
+              <label for="descuento">Descuento:</label>
+              <input class="text-center input_txt_3" type="text" id="descuento" oninput="ajustarTamaño(this)" name="descuento">  
+            </div>
+          
+            <div class="col-5 d-flex align-items-center mb-4 selector">
+              <label for="cuotas">Cuotas:</label>
+              <select id="cuotas" name="cuotas" class="form-select ms-3 border-2">
+                <option value="3cuotas">3 Cuotas sin interes</option>
+                <option value="6cuotas">6 Cuotas sin interes</option>
+                <option value="12cuotas">12 Cuotas sin interes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-12 img_producto d-flex align-items-center">
+            <label for="imagenes">Imágenes:</label>
+            <input class="mx-3 m-4" type="submit" onclick="chooseImages()" id="imagenes" value="Elegir archivos">
+            <small>No se ha seleccionado ningún archivo</small>
+          </div>
+
+          <div class="col-4 d-flex">
+
+            <div class="text-center" id="frenteImg">
+              <img src="../Assets/Img/star-wars/baby-yoda-1.webp" width="100%" alt="Frente del producto">
+              <p>Frente</p>
+            </div>
+            
+            <div class="text-center ms-5" id="dorsoImg">
+              <img src="../Assets/Img/star-wars/baby-yoda-box.webp" width="100%" alt="Caja con el producto">
+              <p>Dorso</p>
+            </div>
+            
+          </div>
+
+          <div class="col-12 mt-4">
+              <input class="btn_1" type="submit" value="Modificar producto">
+          </div>
+
+        </form>
+      </div>
+
+        
+
+
+
+    </main>
+    <!-- Fin del Contenido -->
+
+    <!-- Pie de página -->
+    <footer>
+      <!---->
+      <section>
+          <nav class="navbar container">
+              <ul class="navbar__item">
+                  <li class="navbar__item">
+                    <a class="navbar__link" href="./shop.html">VER TIENDA</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a class="navbar__link" href="./admin.html">ADMIN</a>
+                  </li>
+                  <li class="navbar__item">
+                    <a class="navbar__link" href="./contact.html">CONTACTO</a>
+                  </li>
+              </ul> 
+              <picture>
+                  <img src="../Assets/Img/branding/isotype.svg" alt="Isotipo de la marca Funko Shop">
+              </picture>
+          </nav>
+      </section>
+
+      <p class="footer__copy">All rights reserved 2023 - Funkshop & copy;</p>
+      <!---->
+    </footer>  
+    <!-- Fin de pie de página -->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../Js/index.js"></script>
+
+
+</body>
+
+
+</html>
