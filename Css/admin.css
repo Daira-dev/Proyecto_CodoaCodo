@@ -1,152 +1,3 @@
-/*------ NORMALIZACIÓN GENERAL DE LA PÁGINA ------*/
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
-
-:root { /*-- Estilos variables generales --*/
-    /*-- Palette --*/ 
-    --primary-solid: #FF3333;
-    --primary-900: rgb(255, 51, 51, 0.9);
-    --primary-500: rgb(255, 51, 51, 0.5);
-    --primary-300: rgb(255, 51, 51, 0.3);
-
-    --secondary-solid: #1D84B5;
-    --secondary-900: rgb(29, 132, 181, 0.9);
-    --secondary-500: rgb(29, 132, 181, 0.5);
-    --secondary-300: rgb(29, 132, 181, 0.3);
-
-    --dark-solid: #1F1F1F;
-    --dark-900: rgb(31, 31, 31, 0.9);
-    --dark-500: rgb(31, 31, 31, 0.5);
-    --dark-300: rgb(31, 31, 31, 0.3);
-
-    /*-- Background --*/
-    --dark-bg-solid: #30343F;
-    --ligh-bg-solid: #30343F;
-    
-    --light-font-solid: #FFFFFF;
-
-    /*-- Typography --*/
-    --base-font: 'Inter', sans-serif;
-    --alternative-font: 'Raleway', sans-serif;
-
-    /* Font-sizes */
-    --font-display: 4.6em;
-    --font-jumbo: 3.8em;
-    --font-xlarge: 3em;
-    --font-large: 2.4em;
-    --font-medium: 1.8em;
-    --font-small: 1.6em;
-    --font-xsmall: 1.4em;
-
-    /*-- Spacings --*/
-    --spacing-128: 12.8rem;
-    --spacing-68: 6.8rem;
-    --spacing-36: 3.6rem;
-    --spacing-28: 2.8rem;
-    --spacing-24: 2.4rem;
-    --spacing-20: 2rem;
-    --spacing-16: 1.6rem;
-    --spacing-12: 1.2rem;
-    --spacing-8: 0.8rem;
-}
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
-
-
-/*------ ESTILOS GENERALES ------*/
-
-html { /*etiqueta raiz(los demas heredan su comportamiento)*/
-    font-family: var(--base-font);
-    font-size: 62.5%; /*sirve para calcular mejor la medida de "em".ej: 18px = 1.8em*/
-    color: var(--dark-solid);
-}
-
-li a { /*enlaces-fuentes*/
-    text-decoration: none; 
-    font-family: inherit;
-    font-size: 2em;
-    color: inherit; /*siempre toma el valor heredado*/
-}
-
-p { /*parrafos*/
-    font-size: 1.8em;
-}
-
-header, footer{
-    font-family: var(--alternative-font);
-    background-color: var(--dark-bg-solid);
-    color: var(--light-font-solid);
-}
-
-ul, ol { /*listas*/
-    list-style: none;
-}
-
-main {
-    font-family: var(--base-font);
-}
-
-.container { /*margenes de la página automáticos*/
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-
-
-
-/*------ HEADER ------*/
-header {
-    background-color: var(--dark-bg-solid);
-    padding: var(--spacing-36);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar__logo {
-    max-width: 300px;
-}
-
-.navbar__menu {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-36);
-}
-
-.navbar__item {
-    padding: 0;
-}
-
-.navbar__link {
-    font-size: var(--font-medium);
-    padding: var(--spacing-8) var(--spacing-16);
-    display: inline-block;
-    transition: .3s ease-in-out;
-    position: relative;
-    color: var(--light-font-solid);
-}
-
-.navbar__link:hover {
-    background-color: var(--primary-900);
-}
-
-
-
-
-
 /*------ ESTILOS MAIN DE ADMIN ------*/
 
 .container_tabla {
@@ -177,7 +28,7 @@ header {
 
 .titulo {
     font-family: var(--alternative-font);
-    font-size: 4.2em;
+    font-size: var(--font-display);
     font-weight: 700;
 }
 
@@ -202,7 +53,7 @@ table img {
 
 
 
-/*------ ESTILOS MAIN DE REGISTER ------*/
+/*------ ESTILOS MAIN DE REGISTER & LOGIN ------*/
 
 .container_log {
     color: var(--dark-solid);
@@ -212,22 +63,25 @@ table img {
 #subtitulo {
     font-family: var(--alternative-font);
     font-size: var(--font-xlarge);
-    margin: var(--spacing-36) 0;
+    margin: var(--spacing-24) 0;
 }
 
 .formulario {
     font-family: var(--base-font);
-    margin: auto;
-    width: 457px;
-    height: 330px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--spacing-12);
 }
 
 .formulario label {
-    float: left;
+	text-align: right;
+	margin-right: 2em;
     font-size: var(--font-large);
     font-weight: 500;
-    margin: 5px 0 20px 0;
-    clear: left;
+    margin: 0 10px 20px 0;
 }
 
 .formulario input {
@@ -244,7 +98,6 @@ table img {
       outline: 0;
     }
 }
-
 
 .btn_1 {
     margin-right: var(--spacing-36);
@@ -271,7 +124,24 @@ table img {
     color: var(--secondary-solid);
 }
 
+/*-------*/
+  
+.recordarme {
+    font-size: var(--font-medium);
+    font-family: "Inter";
+}
+  
+.mycheck {
+    border: 4px solid black;
+}
 
+  
+
+
+
+
+
+  
 
 
 
@@ -293,7 +163,7 @@ table img {
 }
 
 .input_txt_2 input {
-    width: 90px;
+    width: 100px;
 }
 
 .input_txt_3 {
@@ -333,59 +203,3 @@ table img {
 
 
 
-
-
-
-
-
-
-
-/*------ FOOTER ------*/
-
-footer {
-    padding: var(--spacing-68);
-    padding-bottom: 10px;
-}
-
-footer .navbar__link {
-    padding: 3px;
-}
-
-footer .navbar__link:hover {
-    background-color: var(--dark-bg-solid);
-    color: var(--primary-solid);
-}
-
-.footer__copy {
-    margin-top: var(--spacing-36);
-    text-align: center;
-}
-
-
-
-
-
-/*------ SCROLLBAR ------*/
-body::-webkit-scrollbar{
-    background-color: var(--dark-bg-solid);
-    width: 10px;
-    opacity: 0;
-}
-body::-webkit-scrollbar-thumb{
-    background: linear-gradient(120deg, var(--primary-solid), var(--primary-solid));
-    border-radius: 5px;
-}
-
-
-
-/*------ ANIMATIONS ------*/
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}

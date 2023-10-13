@@ -17,6 +17,7 @@
 
     <!-- CSS -->        
     <link rel="stylesheet" href="../Css/admin.css">
+    <link rel="stylesheet" href="../Css/styles.css">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -37,13 +38,13 @@
 
           <ul class="navbar__menu">
               <li class="navbar__item">
-                <a class="navbar__link" href="./shop.html">VER TIENDA</a>
+                <a class="navbar__link" href="shop.html">VER TIENDA</a>
               </li>
               <li class="navbar__item">
-                <a class="navbar__link" href="./admin.html">ADMIN</a>
+                <a class="navbar__link" href="admin.html">ADMIN</a>
               </li>
               <li class="navbar__item">
-                <a class="navbar__link" href="../index.html">SALIR<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
+                <a class="navbar__link" href="index.html">SALIR<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
               </li>
           </ul>
           <!---->
@@ -63,7 +64,7 @@
 
           <div class="col-12 d-flex mt-5">
             <div class="col-5 d-flex align-items-center selector">
-              <label class="fs-1" for="categoria">Categoría:</label>
+              <label for="categoria">Categoría:</label>
               <select id="categoria" name="categoria" class="form-select ms-3 border-2">
                   <option value="figura">Funkos</option>
                   <option value="llaveros">Llaveros</option>
@@ -72,12 +73,12 @@
             </div>
   
             <div class="col-5 d-flex align-items-center selector">
-              <label class="fs-1 ms-5" for="licencia">Licencia:</label>
+              <label class="ms-5" for="licencia">Licencia:</label>
               <select id="licencia" name="licencia" class="form-select ms-3 border-2">
-                <option value="narutoshippuden">Naruto Shippuden</option>
                 <option value="pokemon">Pokemon</option>
                 <option value="harrypotter">Harry Potter</option>
                 <option value="starwars">Star Wars</option>
+                <option value="narutoshippuden">Naruto Shippuden</option>
               </select>
             </div>
           </div>
@@ -120,8 +121,22 @@
 
           <div class="col-12 img_producto d-flex align-items-center">
             <label for="imagenes">Imágenes:</label>
-            <input class="mx-3 m-4" type="submit" id="imagenes" value="Elegir archivos">
+            <input class="mx-3 m-4" type="submit" onclick="chooseImages()" id="imagenes" value="Elegir archivos">
             <small>No se ha seleccionado ningún archivo</small>
+          </div>
+
+          <div class="col-4 d-flex">
+
+            <div class="text-center" id="frenteImg">
+              <img src="../Assets/Img/star-wars/baby-yoda-1.webp" width="100%" alt="Frente del producto">
+              <p>Frente</p>
+            </div>
+            
+            <div class="text-center ms-5" id="dorsoImg">
+              <img src="../Assets/Img/star-wars/baby-yoda-box.webp" width="100%" alt="Caja con el producto">
+              <p>Dorso</p>
+            </div>
+            
           </div>
 
           <div class="col-12 mt-4">
@@ -145,13 +160,10 @@
           <nav class="navbar container">
               <ul class="navbar__item">
                   <li class="navbar__item">
-                    <a class="navbar__link" href="./shop.html">SHOP</a>
+                    <a class="navbar__link" href="./shop.html">VER TIENDA</a>
                   </li>
                   <li class="navbar__item">
-                    <a class="navbar__link" href="./register">REGISTRARSE</a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__link" href="./login.html">LOGIN</a>
+                    <a class="navbar__link" href="./admin.html">ADMIN</a>
                   </li>
                   <li class="navbar__item">
                     <a class="navbar__link" href="./contact.html">CONTACTO</a>
