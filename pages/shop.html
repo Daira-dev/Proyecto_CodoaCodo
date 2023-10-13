@@ -10,7 +10,7 @@
     <meta name="keywords" content="html, css, js, javascript, codo a codo" />
 
     <!-- Título-->
-    <title>Home │ Funkoshop</title>
+    <title> Shop │ Funkoshop </title>
 
     <!--Íconos-->
     <script
@@ -19,7 +19,8 @@
     ></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../Css/styles-Shop.css"/>
+    <link rel="stylesheet" href="../Css/styles.css"/>
+    <link rel="stylesheet" href="../Css/shop.css"/>
 
     <!-- Bootstrap CSS -->
     <link
@@ -30,43 +31,40 @@
     />
   </head>
 
-  <body>
-    <!-- Encabezado -->
-    <header class="header">
-      <!--Navbar-->
-      <nav class="navbar">
-        <picture class="navbar__logo">
-          <a href="./index.html">
-            <img
-              src="../Assets/Img/branding/logo_light_horizontal.svg"
-              alt="Isotipo de FunkoShop"
-            />
-          </a>
-        </picture>
+<body>
 
-        <ul class="navbar__menu">
-          <li class="navbar__links">
-            <a href="./pages/shop.html">SHOP</a>
-          </li>
-          <li class="navbar__links">
-            <a href="./pages/contact.html">CONTACT</a>
-          </li>
-          <li class="navbar__links">
-            <a href="./pages/login.html">LOGIN</a>
-          </li>
-          <li class="navbar__links">
-            <a href="./pages/cart.html">
-              <img
-                src="../Assets/Img/icons/cart-icon.svg"
-                alt="Icono del carrito"
-              />
+  <!-- Encabezado -->
+  <header>
+    <nav class="navbar container">
+        <picture class="navbar__logo">
+            <a href="index.html">
+                <img src="../Assets/Img/branding/logo_light_horizontal.svg" alt="isologo funkos shops">
             </a>
-          </li>
+        </picture>
+        <ul class="navbar__menu">
+            <li class="navbar__item whith-submenu">
+                <a class="navbar__link whit-icon" href="shop.html">SHOP<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a href="shop.html"  class="submenu__link">FUNKOS</a></li>
+                    <li class="submenu__item">
+                        <a href="" class="submenu__link">REMERAS</a></li>
+                    <li class="submenu__item">
+                        <a href="" class="submenu__link">LLAVEROS</a></li>
+                </ul>
+            </li>
+            <li class="navbar__item">
+                <a class="navbar__link" href="login.html">LOGIN</a></li>
+            <li class="navbar__item">
+                <a class="navbar__link" href="contact.html">CONTACT</a></li>
+            
+            <li class="navbar__item">
+                <a class="navbar__carrito" href="carrito.html">
+                <img src="../Assets/Img/icons/cart-icon.svg" alt="Isologo carrito">
+            </a></li>
         </ul>
-      </nav>
-      <!---->
-    </header>
-    <!-- Fin del Encabezado -->
+    </nav>
+  </header>
 
     <!-- Contenido -->
 <main class="container">

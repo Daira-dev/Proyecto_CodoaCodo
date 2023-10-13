@@ -1,0 +1,67 @@
+/*------ ESTILOS MAIN DE REGISTER & LOGIN ------*/
+
+.container_log {
+    color: var(--dark-solid);
+    margin: var(--spacing-36) 0;
+}
+
+#subtitulo {
+    font-family: var(--alternative-font);
+    font-size: var(--font-xlarge);
+    margin: var(--spacing-24) 0;
+}
+
+.formulario {
+    font-family: var(--base-font);
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--spacing-12);
+}
+
+.formulario label {
+	text-align: right;
+	margin-right: 2em;
+    font-size: var(--font-large);
+    font-weight: 500;
+    margin: 0 10px 20px 0;
+}
+
+.formulario input {
+    float: right;
+    border: none;
+    border-bottom: 2px solid var(--primary-solid);
+    font-size: var(--font-small); 
+    padding: 3px 0;
+    width: 210px;
+    transition: border-color 0.3s;
+    &:focus,
+    &:hover {
+      border-color: #03a9f4;
+      outline: 0;
+    }
+}
+
+.acepto_terminos {
+    font-size: var(--font-medium);
+}
+
+.terminos_condiciones {
+    color: var(--secondary-solid);
+}
+
+/*-------*/
+  
+.recordarme {
+    font-size: var(--font-medium);
+    font-family: "Inter";
+}
+  
+.mycheck {
+    border: 4px solid black;
+}
+
+  
+
