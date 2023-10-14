@@ -90,9 +90,8 @@ p {
   /*parrafos*/
   font-size: 1.8em;
 }
-
+/*margenes de la página automáticos*/
 .container {
-  /*margenes de la página automáticos*/
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -156,7 +155,6 @@ p {
   font-family: "Inter";
 }
 .sub_text {
-  /* color: var(--secondary-solid); */
   font-family: "Inter";
   font-size: var(--font-small);
   margin-top: 20px;
@@ -207,7 +205,7 @@ p {
 .navbar__logo {
   max-width: 300px;
   gap: var(--spacing-36);
-  margin-left: 300px ;
+  margin-left: 300px;
 }
 .navbar__menu {
   display: flex;
@@ -216,7 +214,6 @@ p {
   margin-right: 272px;
 }
 .navbar__links {
-  /* font-size: var(--font-medium); */
   padding: var(--spacing-8) var(--spacing-16);
   display: inline-block;
   transition: 0.3s ease-in-out;
