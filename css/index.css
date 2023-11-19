@@ -135,7 +135,7 @@ header{
     font-size: var(--font-medium);
     padding: var(--spacing-8) var(--spacing-16);
     display: inline-block;
-    transition: background .3s ease-in-out;
+    transition:  background .3s ease-in-out;
     position: relative;
     color: var(--ligth-font-solid)
 
