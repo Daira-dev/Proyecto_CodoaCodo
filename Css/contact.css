@@ -1,0 +1,61 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lineas-contacto{
+    font-family: var(--base-font);
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--spacing-12);
+}
+
+
+
+.contacto__tittle{
+    font-size: var(--font-medium);
+    font-family: var(--primary-solid);
+    margin: var(--spacin-24) 0;
+}
+
+.contacto__text{
+    font-family: var(--primary-solid);
+    font-size: var(--font-small);
+}
+
+.contacto__boton{
+    font-size: var(--font-small);
+}
+
+iconify-icon {
+    color: var(--dark-bg-solid);
+    font-size: var(--font-small);
+    font-weight: 500;
+
+}
+
+.contacto__link{
+    font-size: var(--font-small);
+
+}
+
+
+.lineas-contacto form{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12);
+    pad: var(--spacing-16);
+}
+
+.formulario input {
+    float: right;
+    border: none;
+    border-bottom: 2px solid var(--primary-solid);
+    font-size: var(--font-small); 
+    padding: 3px 0;
+    width: 210px;
+    
+}
