@@ -19,11 +19,15 @@
     color: #b9b9b9;
 }
 
-.btn__add {
+.btn__add h3 {
     font-family: var(--base-font);
     padding-right: var(--spacing-20);
-    font-size: 24px;
+    font-size: var(--font-large);
     font-weight: 700;
+}
+
+.btn__add button {
+    background: none;
 }
 
 table {
