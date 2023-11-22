@@ -117,7 +117,6 @@ main {
 
 
 .btn_1 {
-    margin-right: var(--spacing-36);
     background-color: var(--primary-solid);
     color: white;
     font-size: var(--font-xsmall);
