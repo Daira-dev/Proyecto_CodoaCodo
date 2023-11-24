@@ -109,6 +109,28 @@ main {
     margin: 0 auto;
 }
 
+.titulo {
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
+    font-weight: 700;
+}
+
+
+.btn_1 {
+    background-color: var(--primary-solid);
+    color: white;
+    font-size: var(--font-xsmall);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 2px;
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(0.8);
+    }
+}
 
 
 
