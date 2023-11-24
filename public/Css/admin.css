@@ -1,0 +1,59 @@
+/*------ ESTILOS MAIN DE ADMIN ------*/
+
+.container_tabla {
+    font-family: var(--base-font);
+    font-size: var(--font-large);
+    font-weight: 500;
+}
+
+#search {
+    border-radius: 6px;
+    border: 2px solid var(--dark-bg-solid);
+    width: 520px;
+    height: 45px;
+    padding-left: 15px;
+    font-size: 2em;
+}
+
+#search::placeholder {
+    color: #b9b9b9;
+}
+
+.btn__add h3 {
+    font-family: var(--base-font);
+    padding-right: var(--spacing-20);
+    font-size: var(--font-large);
+    font-weight: 700;
+}
+
+.btn__add button {
+    background: none;
+}
+
+table {
+    max-width: 1090px;
+}
+
+.table tbody tr {
+    line-height: 62px;
+}
+
+table img {
+    width: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
