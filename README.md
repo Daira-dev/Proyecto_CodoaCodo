@@ -17,10 +17,5 @@ Este es un proyecto como parte del challenge integrador para el curso de NodeJS 
 ##### 👨‍💻Integrantes:
 
 - Daira	Barreto
-- Cinthia Victoria	Grosso
-- Juan I	Figueroa
 - Carla	Flores
-- Juan José	Medina
 - Sasha Nahuel	Rocha
-- GERMAN	BRUSCAGLIA
-- Stefanía	Beñez
