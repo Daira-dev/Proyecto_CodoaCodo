@@ -7,7 +7,9 @@ const shopRoutes = require('./src/routes/shopRoutes');
 app.use(express.static('public'));
 
 app.use('/', mainRoutes);
-app.use('/', shopRoutes);
+app.use('/shop', shopRoutes);
+app.use('/admin', adminRoutes);
+app.use('/auth', authRoutes);
 
 
 app.get('/home', (req,res)=> res.sendFile(__dirname + '/public/pages/index.html'))

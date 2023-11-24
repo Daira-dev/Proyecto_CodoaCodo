@@ -11,7 +11,7 @@ router.get('/shop/cart', (req, res)=> res.send('Route for cart view'));
 
 router.post('/shop/cart', (req, res)=> res.send('Route for go to checkout page'));
 
-module.exports=router;
+module.exports= router;
 
 
 
