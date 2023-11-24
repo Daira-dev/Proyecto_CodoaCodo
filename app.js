@@ -1,13 +1,18 @@
-const express = require('express');
-const app = express();
-const mainRoutes = require('./src/routes/mainRoutes');
-const shopRoutes = require('./src/routes/shopRoutes');
-const adminRoutes = require('./src/routes/adminRoutes');
-const authRoutes = require('./src/routes/authRoutes');
+import express from 'express';
+import mainRoutes from './src/routes/mainRoutes.js';
+import shopRoutes from './src/routes/shopRoutes.js';
+import adminRoutes from './src/routes/adminRoutes.js';
+import authRoutes from './src/routes/authRoutes.js';
 
+const app = express();
+const PORT = 3000
 
 
 app.use(express.static('public'));
+
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
 
 app.use('/', mainRoutes);
 app.use('/shop', shopRoutes);

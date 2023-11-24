@@ -1,11 +1,10 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const shopControllers = require('../controllers/shopController')
 
-router.get('/shop', shopControllers.shop);
-router.get('/shop/item/:id', shopControllers.item);
-router.post('/shop/item/:id/add', shopControllers.add);
-router.get('/shop/cart', shopControllers.cart);
-router.post('/shop/cart', shopControllers.cartpost);
+router.get('/shop', );
+router.get('/shop/item/:id', );
+router.post('/shop/item/:id/add', );
+router.get('/shop/cart', );
+router.post('/shop/cart', );
 
-module.exports = router;
+export default router
