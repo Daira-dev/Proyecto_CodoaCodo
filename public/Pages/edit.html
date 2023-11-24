@@ -119,25 +119,25 @@
             </div>
           </div>
 
-          <div class="col-12 img_producto d-flex align-items-center">
+          <div class="col-12 d-flex align-items-center" id="select_img">
             <label for="imagenes">Imágenes:</label>
-            <input class="mx-3 m-4" type="submit" onclick="chooseImages()" id="imagenes" value="Elegir archivos">
-            <small>No se ha seleccionado ningún archivo</small>
-          </div>
-
-          <div class="col-4 d-flex">
-
-            <div class="text-center" id="frenteImg">
-              <img src="../Assets/Img/star-wars/baby-yoda-1.webp" width="100%" alt="Frente del producto">
-              <p>Frente</p>
+            <div class="image-preview">
+                <input class="mx-3 m-4" type="file" onchange="showImages(event)" id="imagenes" multiple>
+            </div>
+          </div>  
+        
+          <div class="d-flex">
+            <div class="col-2 text-center" id="frenteImg" style="display: none;">
+                <img class="border border-danger border-0 border-2 border-bottom" id="previewImage1" width="100%">
+                <p>Frente</p>
             </div>
             
-            <div class="text-center ms-5" id="dorsoImg">
-              <img src="../Assets/Img/star-wars/baby-yoda-box.webp" width="100%" alt="Caja con el producto">
-              <p>Dorso</p>
+            <div class="col-2 text-center ms-5" id="dorsoImg" style="display: none;">
+                <img class="border border-danger border-0 border-2 border-bottom" id="previewImage2" width="100%">
+                <p>Dorso</p>
             </div>
-            
           </div>
+        
 
           <div class="col-12 mt-4">
               <input class="btn_1" type="submit" value="Modificar producto">
@@ -182,7 +182,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="../Js/edit.js"></script>
+    <script src="/src/public//Js/edit.js"></script>
 
 
 </body>

@@ -46,12 +46,16 @@
     border-radius: 5px;
 }
 
-.img_producto label {
+#select_img label {
     font-size: var(--font-large);
 }
 
-.img_producto input, .img_producto small {
+#select_img input  {
     font-size: var(--font-xsmall);
+}
+
+.product_img {
+    display: none;
 }
 
 

@@ -65,3 +65,17 @@
 
   
 
+
+/*------ ESTILOS MAIN DE CONTACT ------*/
+.image-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-image: url('/src/public/Assets/Img/funkos-banner-blur.webp');
+    background-position: left;
+    background-size: cover;
+    clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%);
+}
