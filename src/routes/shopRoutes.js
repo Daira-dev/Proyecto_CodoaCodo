@@ -1,10 +1,12 @@
 import express from 'express';
+import { shop, item, add, cart, cartpost } from '../controllers/shopController.js';
+
 const router = express.Router();
 
-router.get('/shop', );
-router.get('/shop/item/:id', );
-router.post('/shop/item/:id/add', );
-router.get('/shop/cart', );
-router.post('/shop/cart', );
+router.get('/shop', shop);
+router.get('/shop/item/:id', item);
+router.post('/shop/item/:id/add', add);
+router.get('/shop/cart', cart);
+router.post('/shop/cart', cartpost);
 
-export default router
+export default router;

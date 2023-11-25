@@ -46,6 +46,7 @@
 
 .acepto_terminos {
     font-size: var(--font-medium);
+    margin-left: var(--spacing-24);
 }
 
 .terminos_condiciones {

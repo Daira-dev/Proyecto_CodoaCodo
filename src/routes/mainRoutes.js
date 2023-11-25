@@ -1,11 +1,11 @@
 import express from 'express';
+import { home, contact, about, faqs } from '../controllers/mainController.js';
+
 const router = express.Router();
 
+router.get('/home', home);
+router.get('/contact', contact);
+router.get('/about', about);
+router.get('/faqs', faqs);
 
-router.get('/home',);
-router.get('/contact',);
-router.get('/about',);
-router.get('/faqs',);
-
-
-export default router
+export default router;
