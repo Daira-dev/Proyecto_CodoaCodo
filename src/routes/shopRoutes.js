@@ -3,10 +3,10 @@ import { shop, item, add, cart, cartpost } from '../controllers/shopController.j
 
 const router = express.Router();
 
-router.get('/shop', shop);
-router.get('/shop/item/:id', item);
-router.post('/shop/item/:id/add', add);
-router.get('/shop/cart', cart);
-router.post('/shop/cart', cartpost);
+router.get('/', shop);
+router.get('/item/:id', item);
+router.post('/item/:id/add', add);
+router.get('/cart', cart);
+router.post('/cart', cartpost); 
 
 export default router;
