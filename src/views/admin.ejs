@@ -28,29 +28,7 @@
 <body>
 
     <!-- Encabezado -->
-    <header>
-      <nav class="container navbar">
-        <!---->
-          <picture class="navbar__logo">
-              <a href="">
-                  <img src="../Assets/Img/branding/logo_light_horizontal.svg" alt="isologo funkos shops">
-              </a>
-          </picture>
-
-          <ul class="navbar__menu">
-              <li class="navbar__item">
-                <a class="navbar__link" href="shop.html">VER TIENDA</a>
-              </li>
-              <li class="navbar__item">
-                <a class="navbar__link" href="admin.html">ADMIN</a>
-              </li>
-              <li class="navbar__item">
-                <a class="navbar__link" href="index.html">SALIR<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
-              </li>
-          </ul>
-          <!---->
-      </nav>
-    </header>
+    <%- include ('partials/headerAdmin') %>
     <!-- Fin del Encabezado -->
 
 
@@ -211,33 +189,7 @@
     <!-- Fin del Contenido -->
 
     <!-- Pie de página -->
-    <footer>
-      <!---->
-      <section>
-          <nav class="navbar container">
-              <ul class="navbar__item">
-                  <li class="navbar__item">
-                    <a class="navbar__link" href="shop.html">SHOP</a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__link" href="register.html">REGISTRARSE</a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__link" href="login.html">INGRESAR</a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__link" href="contact.html">CONTACTO</a>
-                  </li>
-              </ul> 
-              <picture>
-                  <img src="../Assets/Img/branding/isotype.svg" alt="Isotipo de la marca Funko Shop">
-              </picture>
-          </nav>
-      </section>
-
-      <p class="footer__copy">All rights reserved 2023 - Funkshop & copy;</p>
-      <!---->
-    </footer>  
+    <%- include ('partials/footer') %>
     <!-- Fin de pie de página -->
 
     <!-- Scripts -->

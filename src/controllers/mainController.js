@@ -1,8 +1,7 @@
-const mainControllers = {
-    home: (req, res) => res.send('Router for Home view'),
-    contact: (req, res) => res.send('Router for Contact view'),
-    about: (req, res) => res.send('Router for About view'),
-    faqs: (req, res) => res.send('Router for Faqs view')
-}
+export const home = (req, res) => res.render('../src/views/index.ejs');
 
-module.exports = mainControllers;
+export const contact = (req, res) => res.render('../src/views/contact.ejs');
+
+export const about = (req, res) => res.render('../src/views/about.ejs');
+
+export const faqs = (req, res) => res.render('../src/views/faqs.ejs');

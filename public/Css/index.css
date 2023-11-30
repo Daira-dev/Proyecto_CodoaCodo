@@ -131,24 +131,23 @@ header{
 }
 
 .navbar__link{
+    display: flex;
+    align-items: center;
     font-size: var(--font-medium);
     padding: var(--spacing-8) var(--spacing-16);
-    display: inline-block;
     transition: background .3s ease-in-out;
     position: relative;
     color: var(--ligth-font-solid)
+}
 
+.navbar__link iconify-icon {
+    margin-left: 0.5em;
 }
 
 .navbar__link:hover{
     background-color: var(--primary-900);
 }
 
-.whit-icon{
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-8);
-}
 .with-submenu:hover .submenu{
     display:block;
 
@@ -160,7 +159,6 @@ header{
     position: absolute;
     background-color: var(--dark-bg-solid);
     z-index: 3;
-    
 }
 
 
@@ -296,18 +294,28 @@ header{
     flex-direction: column;
     gap: var(--spacing-36);
     margin: var(--spacing-68) auto;
-
 }
 
-.slider__tittle{
-font-family: var(--alternative-font);
-font-size: var(--font-display);
-text-transform: uppercase;
+.slider__title {
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
+    text-transform: uppercase;
 }
-.slider__items{
-    display: flex;
-    gap:var(--spacing-24);
+
+button iconify-icon {
+    color: var(--dark-bg-solid);
+    font-size: var(--font-small);
+    font-weight: 700;
 }
+
+.glide__arrow--left {
+    left: 0;
+}
+
+.glide__arrow--right {
+    right: 0;
+}
+
 
 .card-item__cover{
     display: flex;
@@ -344,14 +352,17 @@ text-transform: uppercase;
 
 .card-item__content{
     display: flex;
+    font-family: var(--base-font);
     flex-direction: column;
     gap: var(--spacing-12);
     pad: var(--spacing-16);
 }
 
 .card-item__license{
+    color: var(--dark-bg-solid);
     font-size: var(--font-xsmall);
     font-weight: 500;
+    margin: 0;
 }
 
 .card-item__name{
@@ -368,6 +379,9 @@ text-transform: uppercase;
     color: var(--secondary-solid);
     font-weight: 700;
 }
+
+
+
  /*footer*/
 
  .footer{
@@ -387,4 +401,16 @@ text-transform: uppercase;
     100%{
         opacity: 1;
     }
+}
+
+
+/*------ SCROLLBAR ------*/
+body::-webkit-scrollbar{
+    background-color: var(--dark-bg-solid);
+    width: 10px;
+    opacity: 0;
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(120deg, var(--primary-solid), var(--primary-solid));
+    border-radius: 5px;
 }
