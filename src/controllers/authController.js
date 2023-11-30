@@ -1,15 +1,9 @@
-export const login = (req, res) => res.send('Router for login view');
+export const login = (req, res) => res.render('../src/views/login.ejs');
 
-export const loginpost = (req, res) => { 
-    console.log(req.body)
-    res.send('Router for login')
-};
+export const loginpost = (req, res) => res.render('../src/views/admin.ejs');
 
-export const register = (req, res) => res.send('Router for register view');
+export const register = (req, res) => res.render('../src/views/register.ejs');
 
-export const registerpost = (req, res) => { 
-    console.log(req.body)
-    res.send('Router for register')
-};
+export const registerpost = (req, res) => res.render('../src/views/admin.ejs');
 
-export const logout = (req, res) => res.send('Router for leave to login and come back the home page');
+export const logout = (req, res) => res.render('../src/views/index.ejs');

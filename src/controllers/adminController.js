@@ -1,6 +1,6 @@
-export const admin = (req, res) => res.send('Router for admin view');
+export const admin = (req, res) => res.render('../src/views/admin');
 
-export const create = (req, res) => res.send('Router for create a product');
+export const create = (req, res) => res.render('../src/views/create');
 
 export const createpost = (req, res) => { 
     console.log(req.body)
@@ -8,16 +8,16 @@ export const createpost = (req, res) => {
 };
 
 export const id = (req, res) => {
-    const productId = req.query.id;
-    res.send(`Router for edit the product for ID: ${req.params.id}`)
+    const productId = req.params.id;
+    res.render('../src/views/edit')
 };
 
 export const idput = (req, res) => {
-    const productId = req.query.id;
+    const productId = req.params.id;
     res.send(`Router for save a product for ID: ${req.params.id}`)
 };
 
 export const remove = (req, res) => {
-    const productId = req.query.id;
+    const productId = req.params.id;
     res.send(`Router for delete a product for ID: ${req.params.id}`)
 };

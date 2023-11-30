@@ -20,6 +20,10 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+/* Motor Plantillas EJS */
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 app.use(express.static('public'));
 
 app.use(express.json())
@@ -28,10 +32,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('metodo'));
 app.use(methodOverride('put'));
 app.use(methodOverride('delete'));
-
-/* Motor Plantillas EJS */
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
 
 /* Rutas */
 app.use('/', mainRoutes);  

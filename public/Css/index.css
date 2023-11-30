@@ -352,14 +352,17 @@ button iconify-icon {
 
 .card-item__content{
     display: flex;
+    font-family: var(--base-font);
     flex-direction: column;
     gap: var(--spacing-12);
     pad: var(--spacing-16);
 }
 
 .card-item__license{
+    color: var(--dark-bg-solid);
     font-size: var(--font-xsmall);
     font-weight: 500;
+    margin: 0;
 }
 
 .card-item__name{
@@ -376,6 +379,9 @@ button iconify-icon {
     color: var(--secondary-solid);
     font-weight: 700;
 }
+
+
+
  /*footer*/
 
  .footer{
@@ -395,4 +401,16 @@ button iconify-icon {
     100%{
         opacity: 1;
     }
+}
+
+
+/*------ SCROLLBAR ------*/
+body::-webkit-scrollbar{
+    background-color: var(--dark-bg-solid);
+    width: 10px;
+    opacity: 0;
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(120deg, var(--primary-solid), var(--primary-solid));
+    border-radius: 5px;
 }
