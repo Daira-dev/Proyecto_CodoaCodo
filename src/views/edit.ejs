@@ -11,46 +11,22 @@
 
     <!-- Título-->
     <title> Edit │ Funkoshop </title>
-    
-    <!--Íconos-->
-    <script src="https://kit.fontawesome.com/8ee29917fc.js" crossorigin="anonymous"></script>
 
-    <!-- CSS -->        
-    <link rel="stylesheet" href="../Css/edit_create.css">
-    <link rel="stylesheet" href="../Css/styles.css">
-    <link rel="stylesheet" href="../Css/index.css">
+    <!-- Ícono -->
+    <link rel="icon" href="../Assets/Img/branding/isotype.svg">     
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-</head>
 
+    <!-- CSS -->        
+    <link rel="stylesheet" href="../Css/edit_create.css">
+    <link rel="stylesheet" href="../Css/index.css">   
+</head>
 
 <body>
 
     <!-- Encabezado -->
-    <header>
-      <nav class="container navbar">
-        <!---->
-          <picture class="navbar__logo">
-              <a href="../index.html">
-                  <img src="../Assets/Img/branding/logo_light_horizontal.svg" alt="isologo funkos shops">
-              </a>
-          </picture>
-
-          <ul class="navbar__menu">
-              <li class="navbar__item">
-                <a class="navbar__link" href="shop.html">VER TIENDA</a>
-              </li>
-              <li class="navbar__item">
-                <a class="navbar__link" href="admin.html">ADMIN</a>
-              </li>
-              <li class="navbar__item">
-                <a class="navbar__link" href="index.html">SALIR<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
-              </li>
-          </ul>
-          <!---->
-      </nav>
-    </header>
+    <%- include ('partials/headerAdmin') %>  
     <!-- Fin del Encabezado -->
 
 
@@ -147,46 +123,21 @@
         </form>
       </div>
 
-        
-
-
-
     </main>
     <!-- Fin del Contenido -->
 
     <!-- Pie de página -->
-    <footer>
-      <!---->
-      <section>
-          <nav class="navbar container">
-              <ul class="navbar__item">
-                  <li class="navbar__item">
-                    <a class="navbar__link" href="./shop.html">VER TIENDA</a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__link" href="./admin.html">ADMIN</a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__link" href="./contact.html">CONTACTO</a>
-                  </li>
-              </ul> 
-              <picture>
-                  <img src="../Assets/Img/branding/isotype.svg" alt="Isotipo de la marca Funko Shop">
-              </picture>
-          </nav>
-      </section>
-
-      <p class="footer__copy">All rights reserved 2023 - Funkshop & copy;</p>
-      <!---->
-    </footer>  
+    <%- include ('partials/footerAdmin') %>   
     <!-- Fin de pie de página -->
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="/src/public//Js/edit.js"></script>
+    
 
 
 </body>
 
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+<script src="/src/public/Js/edit.js"></script>
+<!---->
 
 </html>

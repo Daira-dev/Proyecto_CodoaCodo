@@ -18,12 +18,10 @@
 }
 
 .title_filters {
+  font-family: var(--base-font);
   font-size: var(--font-large);
   font-weight: 500;
-}
-
-.filters input[type="checkbox"] {
-  margin-right: 5px;
+  margin-bottom: var(--spacing-8);
 }
 
 .filters input[type="text"],
@@ -38,24 +36,38 @@
 }
 
 .filters input[type="number"] {
-  width: 60px;
+  width: 80px;
   height: 28px;
 }
 
+.filters span {
+  margin: var(--spacing-8);
+}
+
+ input[type="number"]::-webkit-inner-spin-button,
+ input[type="number"]::-webkit-outer-spin-button  {
+   -webkit-appearance: none;
+ }
+
+.check_filters input[type="checkbox"] {
+  transform: scale(1.2); 
+  border: 2px solid red;
+  margin-right: 4px;
+  margin-bottom: var(--spacing-16);
+}
+
+.check_filters label {
+  display: inline-block;
+  font-size: var(--font-xsmall);
+  font-weight: 500;
+}
 
 
 
-
-
-/*------ COLLECTION ------ */
+/*------ ITEMS ------ */
 .full-carousel picture img {
   width: 300px;
   height: 300px;
-}
-
-.full-carousel span img:hover {
-  transform: scale(1.1);
-  transition: all 0.6s ease-in-out;
 }
 
 .slider__items {
