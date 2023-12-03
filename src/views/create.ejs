@@ -10,17 +10,17 @@
     <meta name="keywords" content="html, css, js, javascript, codo a codo">
 
     <!-- Título-->
-    <title> Edit │ Funkoshop </title>
+    <title> Create │ Funkoshop </title>
+
+    <!-- Ícono -->
+    <link rel="icon" href="../Assets/Img/branding/isotype.svg">     
     
-    <!--Íconos-->
-    <script src="https://kit.fontawesome.com/8ee29917fc.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <!-- CSS -->        
     <link rel="stylesheet" href="../Css/edit_create.css">
     <link rel="stylesheet" href="../Css/index.css">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
 
@@ -31,116 +31,111 @@
     <!-- Fin del Encabezado -->
 
 
-    <!-- Contenido -->
-    <main class="container container_edit min-vh-1005">
+<!-- Contenido -->
+<main class="container container_edit min-vh-1005">
 
-      <div class="my-5 w-75">
-        
-        <h1 class="titulo">CREAR ITEM</h1>
+  <div class="my-5 w-75">
+    
+    <h1 class="titulo">CREAR ITEM</h1>
 
-        <form class="row gap-0 row-gap-3">
+    <form class="row gap-0 row-gap-3">
 
-          <div class="col-12 d-flex mt-5">
-            <div class="col-5 d-flex align-items-center selector">
-              <label for="categoria">Categoría:</label>
-              <select id="categoria" name="categoria" class="form-select ms-3 border-2">
-                  <option value="figura">Funkos</option>
-                  <option value="llaveros">Llaveros</option>
-                  <option value="remeras">Remeras</option>
-              </select>
-            </div>
-  
-            <div class="col-5 d-flex align-items-center selector">
-              <label class="ms-5" for="licencia">Licencia:</label>
-              <select id="licencia" name="licencia" class="form-select ms-3 border-2">
-                <option value="pokemon">Pokemon</option>
-                <option value="harrypotter">Harry Potter</option>
-                <option value="starwars">Star Wars</option>
-                <option value="narutoshippuden">Naruto Shippuden</option>
-              </select>
-            </div>
-          </div>
-  
-          <div class="col-12 input_txt mt-4">
-              <label for="nombre">Nombre del producto:</label>
-              <input type="text" id="nombre" name="nombre">
-          </div>
+      <div class="col-12 d-flex mt-5">
+        <div class="col-5 d-flex align-items-center selector">
+          <label for="categoria">Categoría:</label>
+          <select id="categoria" name="categoria" class="form-select ms-3 border-2">
+              <option value="figura">Funkos</option>
+              <option value="llaveros">Llaveros</option>
+              <option value="remeras">Remeras</option>
+          </select>
+        </div>
 
-          <textarea id="descripcion" name="descripcion" rows="5" cols="90" required></textarea><br>
-
-          <div class="input_txt_2 col-3 mt-3">
-            <label for="sku">SKU:</label>
-            <input type="text" id="sku" oninput="ajustarTamaño(this)" name="sku">
-          </div>
-          <div class="input_txt_2 col-3 mt-3">
-            <label for="precio">Precio:</label>
-            <input type="text" id="precio" oninput="ajustarTamaño(this)" name="precio">
-          </div>
-          <div class="input_txt_2 col-3 mt-3">
-            <label for="stock">Stock:</label>
-            <input class="text-center input_txt_3" type="text" id="stock" oninput="ajustarTamaño(this)" name="stock">
-          </div>
-
-          <div class="col-12 d-flex mt-4">
-            <div class="col-3 input_txt_2">
-              <label for="descuento">Descuento:</label>
-              <input class="text-center input_txt_3" type="text" id="descuento" oninput="ajustarTamaño(this)" name="descuento">  
-            </div>
-          
-            <div class="col-5 d-flex align-items-center mb-4 selector">
-              <label for="cuotas">Cuotas:</label>
-              <select id="cuotas" name="cuotas" class="form-select ms-3 border-2">
-                <option value="3cuotas">3 Cuotas sin interes</option>
-                <option value="6cuotas">6 Cuotas sin interes</option>
-                <option value="12cuotas">12 Cuotas sin interes</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="col-12 d-flex align-items-center" id="select_img">
-            <label for="imagenes">Imágenes:</label>
-            <div class="image-preview">
-                <input class="mx-3 m-4" type="file" onchange="showImages(event)" id="imagenes" multiple>
-            </div>
-          </div>  
-        
-          <div class="d-flex">
-            <div class="col-2 text-center" id="frenteImg" style="display: none;">
-                <img class="border border-danger border-0 border-2 border-bottom" id="previewImage1" width="100%">
-                <p>Frente</p>
-            </div>
-            
-            <div class="col-2 text-center ms-5" id="dorsoImg" style="display: none;">
-                <img class="border border-danger border-0 border-2 border-bottom" id="previewImage2" width="100%">
-                <p>Dorso</p>
-            </div>
-          </div>
-        
-
-          <div class="col-12 mt-4">
-              <input class="btn_1" type="submit" value="Crear">
-          </div>
-
-        </form>
+        <div class="col-5 d-flex align-items-center selector">
+          <label class="ms-5" for="licencia">Licencia:</label>
+          <select id="licencia" name="licencia" class="form-select ms-3 border-2">
+            <option value="pokemon">Pokemon</option>
+            <option value="harrypotter">Harry Potter</option>
+            <option value="starwars">Star Wars</option>
+            <option value="narutoshippuden">Naruto Shippuden</option>
+          </select>
+        </div>
       </div>
 
+      <div class="col-12 input_txt mt-4">
+          <label for="nombre">Nombre del producto:</label>
+          <input type="text" id="nombre" name="nombre">
+      </div>
+
+      <textarea id="descripcion" name="descripcion" rows="5" cols="90" required></textarea><br>
+
+      <div class="input_txt_2 col-3 mt-3">
+        <label for="sku">SKU:</label>
+        <input type="text" id="sku" oninput="ajustarTamaño(this)" name="sku">
+      </div>
+      <div class="input_txt_2 col-3 mt-3">
+        <label for="precio">Precio:</label>
+        <input type="text" id="precio" oninput="ajustarTamaño(this)" name="precio">
+      </div>
+      <div class="input_txt_2 col-3 mt-3">
+        <label for="stock">Stock:</label>
+        <input class="text-center input_txt_3" type="text" id="stock" oninput="ajustarTamaño(this)" name="stock">
+      </div>
+
+      <div class="col-12 d-flex mt-4">
+        <div class="col-3 input_txt_2">
+          <label for="descuento">Descuento:</label>
+          <input class="text-center input_txt_3" type="text" id="descuento" oninput="ajustarTamaño(this)" name="descuento">  
+        </div>
+      
+        <div class="col-5 d-flex align-items-center mb-4 selector">
+          <label for="cuotas">Cuotas:</label>
+          <select id="cuotas" name="cuotas" class="form-select ms-3 border-2">
+            <option value="3cuotas">3 Cuotas sin interes</option>
+            <option value="6cuotas">6 Cuotas sin interes</option>
+            <option value="12cuotas">12 Cuotas sin interes</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-12 d-flex align-items-center" id="select_img">
+        <label for="imagenes">Imágenes:</label>
+        <div class="image-preview">
+            <input class="mx-3 m-4" type="file" onchange="showImages(event)" id="imagenes" multiple>
+        </div>
+      </div>  
+    
+      <div class="d-flex">
+        <div class="col-2 text-center" id="frenteImg" style="display: none;">
+            <img class="border border-danger border-0 border-2 border-bottom" id="previewImage1" width="100%">
+            <p>Frente</p>
+        </div>
         
+        <div class="col-2 text-center ms-5" id="dorsoImg" style="display: none;">
+            <img class="border border-danger border-0 border-2 border-bottom" id="previewImage2" width="100%">
+            <p>Dorso</p>
+        </div>
+      </div>
+    
 
+      <div class="col-12 mt-4">
+          <input class="btn_1" type="submit" value="Crear">
+      </div>
 
-
-    </main>
-    <!-- Fin del Contenido -->
+    </form>
+  </div>
 
     <!-- Pie de página -->
-    <%- include ('partials/footer') %>  
+    <%- include ('partials/footerAdmin') %>  
     <!-- Fin de pie de página -->
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src=""></script>
+
 
 
 </body>
 
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+<script src="../Js/edit_create.js"></script>
+<!----->
 
 </html>

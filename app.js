@@ -4,12 +4,19 @@ import methodOverride from 'method-override';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { createRequire } from 'module'; 
+const require = createRequire(import.meta.url);
+const productos = require('./productos.json');
 
-/* Rutas */
+
+/* Importación de Rutas */
 import mainRoutes from './src/routes/mainRoutes.js';
 import shopRoutes from './src/routes/shopRoutes.js';
 import adminRoutes from './src/routes/adminRoutes.js';
 import authRoutes from './src/routes/authRoutes.js';
+
+
+console.log(productos);
 
 dotenv.config()
 
@@ -19,6 +26,7 @@ const __dirname = dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+
 
 /* Motor Plantillas EJS */
 app.set('view engine', 'ejs');
@@ -33,11 +41,22 @@ app.use(methodOverride('metodo'));
 app.use(methodOverride('put'));
 app.use(methodOverride('delete'));
 
+
 /* Rutas */
 app.use('/', mainRoutes);  
 app.use('/shop', shopRoutes);
 app.use('/admin', adminRoutes);
 app.use('/auth', authRoutes);
+
+
+/* Redirección al Home al iniciar el server*/
+app.get('/', (req, res) => {
+    res.redirect('/home');
+});
+
+app.get('/home', (req, res) => {
+  res.render('index', { title: 'Mi Página EJS' });
+});
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en  http://localhost:${PORT}`);
