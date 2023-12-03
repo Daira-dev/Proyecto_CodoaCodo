@@ -21,7 +21,7 @@
 
     /*-- Background --*/
     --dark-bg-solid: #30343F;
-    --ligh-bg-solid: #30343F;
+    --light-bg-solid: #30343f;
     
     --light-font-solid: #FFFFFF;
 
@@ -69,7 +69,8 @@ html { /*etiqueta raiz(los demas heredan su comportamiento)*/
 }
 
 
-li a { /*enlaces-fuentes*/
+li a,
+a { /*enlaces-fuentes*/
     text-decoration: none; 
     font-family: inherit;
     color: inherit; /*siempre toma el valor heredado*/
@@ -126,7 +127,20 @@ img {
     }
 }
 
+/*------ FAQS ------*/
+.faqs {
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+    color: var(--primary-solid);
+    font-size: 50px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
 
+.faqs:hover {
+    transform: scale(1.2) rotate(10deg);
+}
 
 
 /*------  HEADER ------*/
@@ -201,10 +215,9 @@ header{
     background-image: url(../Assets/Img/funkos-banner.webp);
     padding: var(--spacing-128);
     background-size: cover;
-    background-position: top;
+    background-position: bottom;
     background-attachment: fixed;
     position: relative;
-
 }
 
 .hero::before{
@@ -231,12 +244,12 @@ header{
 .hero__title{
     font-family: var(--alternative-font);
     font-size: var(--font-jumbo);
-    color: var(--ligth-font-solid);
+    color: var(--light-font-solid);
 }
 
 .hero__text{
     font: var(--alternative-font);
-    color: var(--ligth-font-solid);
+    color: var(--light-font-solid);
     font-size: var(--font-medium);
 
 }
@@ -244,7 +257,7 @@ header{
 .hero__link{
     display: inline-block;
     font-size: var(--font-medium);
-    background-color: var(--light-bg-solid);
+    background-color: var(--light-font-solid);
     padding: var(--spacing-12)var(--spacing-68);
     border-radius: 50px;
     font-weight: 500;
@@ -253,7 +266,7 @@ header{
 
 .hero__link:hover{
     background-color: var(--primary-900);
-    color: var(--ligth-font-solid);
+    color: var(--light-font-solid);
 }
 
 
@@ -296,7 +309,7 @@ header{
     display: inline-block;
     font-size: var(--font-medium);
     background-color: var(--dark-bg-solid);
-    color: var(--light-bg-solid);
+    color: var(--light-font-solid);
     padding: var(--spacing-16) var(--spacing-36);
     border-radius: 50px;
     font-weight: 500;

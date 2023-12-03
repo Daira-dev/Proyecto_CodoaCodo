@@ -1,0 +1,24 @@
+
+.about-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.mission-values {
+    background-color: #f8f9fa;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+}

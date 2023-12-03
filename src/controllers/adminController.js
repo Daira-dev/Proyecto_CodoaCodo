@@ -10,6 +10,7 @@ export const createpost = (req, res) => {
 export const id = (req, res) => {
     const productId = req.params.id;
     res.render('../src/views/edit')
+    res.send(`Router for save a product for ID: ${req.params.id}`)
 };
 
 export const idput = (req, res) => {

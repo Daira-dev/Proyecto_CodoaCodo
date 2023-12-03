@@ -4,12 +4,19 @@ import methodOverride from 'method-override';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { createRequire } from 'module'; 
+const require = createRequire(import.meta.url);
+const productos = require('./productos.json');
+
 
 /* Rutas */
 import mainRoutes from './src/routes/mainRoutes.js';
 import shopRoutes from './src/routes/shopRoutes.js';
 import adminRoutes from './src/routes/adminRoutes.js';
 import authRoutes from './src/routes/authRoutes.js';
+
+
+console.log(productos);
 
 dotenv.config()
 
