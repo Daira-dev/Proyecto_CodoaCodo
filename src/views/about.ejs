@@ -25,35 +25,87 @@
 
 <body>
 
+    <!-- Encabezado -->
+    <%- include ('partials/header') %>
+    <!-- Fin del Encabezado -->
+
+    <!--Banner-->
+    <section class="hero_about">
+        <article class="row">
+            <div class="col-7">
+                <h2 class="titulo">SOBRE NOSOTROS</h2>
+                <p>Funkoshop se creó desde la fascinación por la cultura Pop!.
+                    Nuestra misión es proporcionar a nuestros clientes los coleccionables más conocidos
+                    y exclusivos, garantizando una experiencia de compra única y de gran calidad.
+                </p>
+            </div>
+        </article>
+    </section>
+    <!---->
+
+
+    <!-- Contenido -->
     <main>
-        <h1>FunkoShop</h1>
-        <p>Tu destino para coleccionables exclusivos</p>
 
-        <section class="about-content">
-            <div class="about-text">
-                <h2>Quiénes Somos</h2>
-                <p>Somos una tienda de Funko Pops ubicada en Argentina, dedicada a ofrecer la mejor selección de figuras coleccionables de tus personajes favoritos.</p>
-            </div>
-            <div class="about-image">
-                <img src=".jpg" alt="Imagen de la tienda">
-            </div>
-        </section>
+        <ul class="cards_about row">                         
+            <li class="col-6 col-lg-4">
+                <div class="card_about">
+                    <img src="../Assets/Img/1_about.png" class="img-fluid" alt="" loading="lazy">
+                    
+                    <div class="content_card">
+                        <h4 class="card_item card-item__name">FUNKOSHOP</h4>
 
-        <section class="mission-values">
-            <div class="mission">
-                <h2>Nuestra Misión</h2>
-                <p>Proporcionar a nuestros clientes los Funko Pops más exclusivos y difíciles de encontrar, garantizando una experiencia de compra única y emocionante.</p>
-            </div>
-            <div class="values">
-                <h2>Nuestros Valores</h2>
-                <ul>
-                    <li>Compromiso con la calidad</li>
-                    <li>Variedad de selección</li>
-                    <li>Servicio al cliente excepcional</li>
-                </ul>
-            </div>
-        </section>
+                        <p class="card_item">Visita nuestra tienda y encuentra todos tus coleccionables favoritos</p>
+        
+                        <a class="collection__link" href="/shop">IR A LA TIENDA</a>   
+                    </div>
+                </div>
+            </li>
+
+            <li class="col-6 col-lg-4 my_card">
+                <div class="card_about">
+                    <img src="../Assets/Img/2_about.png" class="img-fluid" alt="" loading="lazy">
+                    
+                    <div class="content_card">
+                        <h4 class="card_item card-item__name">CONTACTANOS</h4>
+                        
+                        <p class="card_item">Puedes visitar nuestra sucursal Funkoshop o enviarnos un mensaje</p>
+        
+                        <a class="collection__link" href="/contact">IR A CONTACTO</a>   
+                    </div>
+                </div>
+            </li>
+            
+            <li class="col-6 col-lg-4">
+                <div class="card_about">
+                    <img src="../Assets/Img/3_about.png" class="img-fluid" alt="" loading="lazy">
+                    
+                    <div class="content_card">
+                        <h4 class="card_item card-item__name">PREGUNTAS FRECUENTES</h4>
+                        
+                        <p class="card_item">¿Tienes dudas? Entra a nuestra sección de preguntas</p>
+        
+                        <a class="collection__link" href="/faqs">IR A FAQS</a>   
+                    </div>
+                </div>
+            </li>
+
+
+        </ul>
+        
+
     </main>
+    <!-- Fin del Contenido -->
+
+    <!-- Encabezado -->
+    <%- include ('partials/footer') %>
+    <!-- Fin del Encabezado -->
+
 </body>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+<!----->
+
 
 </html>
