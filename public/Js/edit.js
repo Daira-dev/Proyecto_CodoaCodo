@@ -8,7 +8,7 @@ var producto = {
     descuento: "10%",
     categoria: "figura",
     licencia: "starwars",
-    cuotas: "3cuotas",
+    cuotas: "3cuotas"
 };
 
 // Función para cargar los datos del producto

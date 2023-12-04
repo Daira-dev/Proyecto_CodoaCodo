@@ -15,7 +15,6 @@ import shopRoutes from './src/routes/shopRoutes.js';
 import adminRoutes from './src/routes/adminRoutes.js';
 import authRoutes from './src/routes/authRoutes.js';
 
-
 console.log(productos);
 
 dotenv.config()
@@ -26,7 +25,6 @@ const __dirname = dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 8080;
-
 
 /* Motor Plantillas EJS */
 app.set('view engine', 'ejs');
@@ -48,6 +46,12 @@ app.use('/shop', shopRoutes);
 app.use('/admin', adminRoutes);
 app.use('/auth', authRoutes);
 
+
+/* Ícono */
+app.use((req, res, next) => {
+  res.locals.iconPath = '/Assets/Img/branding/isotype.svg';
+  next();
+});
 
 /* Redirección al Home al iniciar el server*/
 app.get('/', (req, res) => {
