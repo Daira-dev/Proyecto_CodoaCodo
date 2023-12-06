@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(228, 226, 226);
+}
+
+.list-style-one li{
+    position:relative;
+    font-size: var(--font-small);
+    margin-bottom: 12px;
+}
+  
+.list-style-one li:before {
+    padding: 0px;
+    color: var(--primary-solid);
+}
+
+
+.hero_about {
+    color: var(--light-font-solid);
+    background-color: var(--primary-900);
+    background-image: url(../Assets/Img/star-wars/trooper-1.webp);
+    padding: var(--spacing-128);
+    position: relative;
+    background-size: 55em;
+    background-repeat: no-repeat;
+    background-position: right top; 
+}
+
+
+.cards_about {
+    margin: 10em;
+}
+
+.content_card {
+    padding: 2em;
+}
+
+.card_about {
+    border-radius: 20px;
+    background-color: var(--light-font-solid);
+    transition: all 0.5s;
+}
+
+.card_about img {
+    border-radius: 20px 20px 0 0;
+}
+
+.card_item {
+    margin-bottom: 0.8em;
+}
+
+.card_item h2{
+    margin-top: 2em;
+}

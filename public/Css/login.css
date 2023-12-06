@@ -46,6 +46,7 @@
 
 .acepto_terminos {
     font-size: var(--font-medium);
+    margin-left: var(--spacing-24);
 }
 
 .terminos_condiciones {
@@ -56,26 +57,85 @@
   
 .recordarme {
     font-size: var(--font-medium);
-    font-family: "Inter";
+    margin-left: var(--spacing-8);
+}
+
+.recordarme input {
+    margin-left: 1em;
 }
   
 .mycheck {
     border: 4px solid black;
 }
 
-  
-
-
-/*------ ESTILOS MAIN DE CONTACT ------*/
-.image-container {
-    position: relative;
+.sub_text a{
+    text-decoration: none;
 }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    background-image: url('/src/public/Assets/Img/funkos-banner-blur.webp');
-    background-position: left;
-    background-size: cover;
-    clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%);
+
+
+/*------ ESTILOS MAIN DE CONTACTO ------*/
+
+.inf_contacto {
+    text-align: center;
+    background-color: var(--dark-bg-solid);
+    color: var(--light-font-solid);
+    border-radius: 6px;
+    padding: var(--spacing-36);
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.contacto__text{
+    margin-top: 5px;
+    font-size: var(--font-small);
+}
+
+.lineas_contacto {
+    text-align: left;
+    display: inline-flexbox;
+	  margin: var(--spacing-24);
+    padding: var(--spacing-12);
+    color: var(--light-font-solid);
+}
+
+.lineas_contacto a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.lineas_contacto iconify-icon {
+    color: inherit;
+    font-size: var(--font-small);
+    margin-right: var(--spacing-8);
+}
+
+.contacto__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.contacto__link{
+    font-size: var(--font-small);
+}
+.contacto__link:hover {
+    color: var(--primary-900);
+    transition: 0.5s;
+}
+
+.form_contact form{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  pad: var(--spacing-16);
+}
+
+
+
+.input_txt textarea {
+  border: 2px solid var(--primary-solid);
+  border-radius: 6px;
+  font-size: var(--font-small);
+  padding: var(--spacing-8);
 }

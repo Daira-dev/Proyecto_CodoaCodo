@@ -10,10 +10,7 @@
     <meta name="keywords" content="html, css, js, javascript, codo a codo">
 
     <!-- Título-->
-    <title> Edit │ Funkoshop </title>
-    
-    <!--Ícono-->
-    <link rel="icon" href="../Assets/Img/branding/isotype.svg">     
+    <title> Edit │ Funkoshop </title>    
     
     <!-- CSS -->        
     <link rel="stylesheet" href="../Css/edit_create.css">
@@ -26,29 +23,7 @@
 
 <body>
     <!-- Encabezado -->
-    <header>
-      <nav class="container navbar">
-        <!---->
-          <picture class="navbar__logo">
-              <a href="/home">
-                  <img src="../Assets/Img/branding/logo_light_horizontal.svg" alt="isologo funkos shops">
-              </a>
-          </picture>
-  
-          <ul class="navbar__menu">
-              <li class="navbar__item">
-                <a class="navbar__link" href="/shop">VER TIENDA</a>
-              </li>
-              <li class="navbar__item">
-                <a class="navbar__link" href="/admin">ADMIN</a>
-              </li>
-              <li class="navbar__item">
-                <a class="navbar__link" href="/home">SALIR</a>
-              </li>
-          </ul>
-          <!---->
-      </nav>
-    </header>
+    <%- include ('partials/headerAdmin') %>
     <!-- Fin del Encabezado -->
 
     <!-- Contenido -->
@@ -126,12 +101,12 @@
         
           <div class="d-flex">
             <div class="col-2 text-center" id="frenteImg" style="display: none;">
-                <img class="border border-danger border-0 border-2 border-bottom" id="img_front" width="100%">
+                <img class="border border-danger border-0 border-2 border-bottom" id="previewImage1" width="100%">
                 <p>Frente</p>
             </div>
             
             <div class="col-2 text-center ms-5" id="dorsoImg" style="display: none;">
-                <img class="border border-danger border-0 border-2 border-bottom" id="img_back" width="100%">
+                <img class="border border-danger border-0 border-2 border-bottom" id="previewImage2" width="100%">
                 <p>Dorso</p>
             </div>
           </div>
@@ -147,28 +122,7 @@
     <!-- Fin del Contenido -->
 
     <!-- Pie de página -->
-    <footer class="footer">
-      <nav class="navbar container">
-          <ul class="navbar__item">
-              <li class="navbar__item">
-                  <a class="navbar__link" href="/shop">SHOP</a>
-              </li>
-              <li class="navbar__item">
-                  <a class="navbar__link" href="/auth/register">REGISTRARSE</a>
-              </li>
-              <li class="navbar__item">
-                  <a class="navbar__link" href="/auth/login">INGRESAR</a>
-              </li>                    
-              <li class="navbar__item">
-                  <a class="navbar__link" href="/contact">CONTACTO</a>
-              </li>                 
-          </ul>
-          <picture>
-              <img src="../Assets/Img/branding/isotype.svg" alt="Isotipo de la marca Funko Shop">
-          </picture>
-      </nav>
-      <p class="footer__copy">All rights reserved 2023 - Funkshop & copy</p>
-    </footer>
+    <%- include ('partials/footerAdmin') %>
     <!-- Fin de pie de página -->
 
 </body>

@@ -11,8 +11,8 @@
     
     <!-- Título-->
     <title> Shop │ Funkoshop </title>
-
-    <!-- Bootstrap -->
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <!-- CSS -->
@@ -21,47 +21,8 @@
 </head>
 
 <body>
-
   <!-- Encabezado -->
-  <header>
-    <!--Navbar-->
-    <nav class="navbar">
-        <picture class="navbar__logo">
-            <a href="./index.html">
-                <img src="../Assets/Img/branding/logo_light_horizontal.svg" alt="Isotipo de FunkoShop">
-            </a>
-        </picture>
-
-        <ul class="navbar__menu">
-            <li class="navbar__item with-submenu">
-                <a class="navbar__link with-icon" href="./pages/shop/shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
-                <ul class="submenu">
-                    <li class="submenu__item">
-                        <a href="" class="submenu__link">Funkos</a>
-                    </li>
-                    <li class="submenu__item">
-                        <a href="" class="submenu__link">Remeras</a>
-                    </li>
-                    <li class="submenu__item">
-                        <a href="" class="submenu__link">Llaveros</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="navbar__item">
-                <a class="navbar__link" href="./pages/contact.html">CONTACT</a>
-            </li>
-            <li class="navbar__item">
-                <a class="navbar__link" href="./pages/admin/login.html">LOGIN</a>  
-            </li>
-            <li class="navbar__item">
-                <a class="navbar__cart" href="Pages/carrito.html">
-                    <img src="../Assets/Img/icons/cart-icon.svg" alt="Icono del carrito">
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <!---->
-  </header>
+  <%- include ('partials/header') %>
   <!-- Fin del Encabezado -->
 
   <!-- Contenido -->
@@ -121,7 +82,7 @@
           
           <li class="slider__item">
             <article class="card-item">
-              <a class="card-item__link" href="shop.html">
+              <a class="card-item__link" href="../../public/Pages/item.html">
                 <picture class="card-item__cover">
                     <span class="card-item__tag">Nuevo</span>
                     <img class="card-item__img--front" src="../Assets/Img/star-wars/trooper-1.webp" alt="Coleccionablefigura star-wars">
@@ -139,7 +100,7 @@
   
           <li class="slider__item">
             <article class="card-item">
-              <a class="card-item__link" href="shop.html">
+              <a class="card-item__link" href="/shop">
                 <picture class="card-item__cover">
                     <span class="card-item__tag">Nuevo</span>
                     <img class="card-item__img--front" src="../Assets/Img/star-wars/baby-yoda-1.webp" alt="Coleccionablefigura star-wars">
@@ -157,17 +118,17 @@
   
           <li class="slider__item">
             <article class="card-item">
-              <a class="card-item__link" href="shop.html">
+              <a class="card-item__link" href="/shop">
                 <picture class="card-item__cover">
-                  <span class="card-item__tag">Nuevo</span>
-                  <img class="card-item__img--front" src="../Assets/Img/star-wars/luke-1.webp" alt="Coleccionablefigura star-wars">
-                  <img class="card-item__img--back" src="../Assets/Img/star-wars/luke-box.webp" alt="Coleccionablefigura star-wars, en caja">
+                    <span class="card-item__tag">Nuevo</span>
+                    <img class="card-item__img--front" src="../Assets/Img/star-wars/luke-1.webp" alt="Coleccionablefigura star-wars">
+                    <img class="card-item__img--back" src="../Assets/Img/star-wars/luke-box.webp" alt="Coleccionablefigura star-wars, en caja">
                 </picture>
                 <div class="card-item__content">
-                  <p class="card-item__license">STAR WARS</p>
-                  <span class="card-item__name">LUKE SKYWALKER <span style="font-size: 14px;">(WITH GROGU)</span></h4>
-                  <p class="card-item__price">$1799,99</p>
-                  <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
+                    <p class="card-item__license">STAR WARS</p>
+                    <h4 class="card-item__name">LUKE SKYWALKER</h4>
+                    <p class="card-item__price">$1799,99</p>
+                    <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                 </div>
               </a>
             </article>
@@ -175,7 +136,7 @@
   
           <li class="slider__item">
             <article class="card-item">
-              <a class="card-item__link" href="shop.html">
+              <a class="card-item__link" href="/shop">
                 <picture class="card-item__cover">
                   <span class="card-item__tag">Nuevo</span>
                   <img class="card-item__img--front" src="../Assets/Img/pokemon/pidgeotto-1.webp" alt="Coleccionablefigura pokemon">
@@ -310,31 +271,12 @@
   <!---->
 
   <!-- Pie de página -->
-  <footer class="footer">
-    <nav class="navbar container">
-      <ul class="navbar__item">
-          <li class="navbar__item" >
-              <a class="navbar__link" href="shop.html">SHOP</a></li>
-          <li class="navbar__item">
-              <a class="navbar__link" href="resgister.html">REGISTRARSE</a></li>
-          <li class="navbar__item">
-              <a class="navbar__link" href="login.html">LOGIN</a></li>                    
-          <li class="navbar__item">
-              <a class="navbar__link" href="login.html">CONTACTO</a></li>                 
-      </ul>
-      <picture>
-          <img src="../Assets/Img/branding/isotype.svg" alt="Isotipo de la marca Funko Shop">
-      </picture>
-
-    </nav>
-    <p class="footer__copy">All rights reserved 2023 - Funkshop & copy</p>
-  </footer>
+  <%- include ('partials/footer') %>
   <!---->
-
 </body>
 
-    <!--Scripts-->
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    
+<!--Scripts-->
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+<!---->  
+
 </html>

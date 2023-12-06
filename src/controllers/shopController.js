@@ -1,9 +1,19 @@
-const shopControllers = {
-    shop: (req, res) => res.send('Router for shop view'),
-    item: (req, res) => res.send(`Router for find and retrieve a product from the ID: ${req.params.id}`),
-    add: (req, res) => res.send(`Router for add the current item ID: ${req.params.id} to the shop cart`),
-    cart: (req, res) => res.send('Router for Cart view'),
-    cartpost: (req, res) => res.send('Router for got to checkout page')
-}
+export const shop = (req, res) => res.render('../src/views/shop.ejs');
 
-module.exports = shopControllers;
+export const item = (req, res) => {
+    const productId = req.params.id;
+    res.render('../src/views/item.ejs');
+};
+
+export const add = (req, res) => { 
+    console.log(req.body)
+    const productId = req.params.id;
+    res.send(`Router for add the current item ID: ${req.params.id} to the shop cart`)
+};
+
+export const cart = (req, res) => res.render('../src/views/carrito.ejs');
+
+export const cartpost = (req, res) => { 
+    console.log(req.body)
+    res.render('../src/views/carrito.ejs')
+};
