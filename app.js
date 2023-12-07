@@ -5,6 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { createRequire } from 'module'; 
+
 const require = createRequire(import.meta.url);
 const productos = require('./productos.json');
 
@@ -14,8 +15,6 @@ import mainRoutes from './src/routes/mainRoutes.js';
 import shopRoutes from './src/routes/shopRoutes.js';
 import adminRoutes from './src/routes/adminRoutes.js';
 import authRoutes from './src/routes/authRoutes.js';
-
-console.log(productos);
 
 dotenv.config()
 
@@ -49,17 +48,24 @@ app.use('/auth', authRoutes);
 
 /* Ícono */
 app.use((req, res, next) => {
-  res.locals.iconPath = '/Assets/Img/branding/isotype.svg';
+  res.locals.iconPath = path.join(__dirname, '../Assets/Img/branding/isotype.svg');
   next();
 });
 
+/* BD PRUEBA
+app.get('/', async (req, res) => {
+  const result = await products.createTable();
+  console.log(result);
+});
+*/
+
 /* Redirección al Home al iniciar el server*/
 app.get('/', (req, res) => {
-    res.redirect('/home');
+  res.redirect('/home');
 });
 
 app.get('/home', (req, res) => {
-  res.render('index', { title: 'Mi Página EJS' });
+  res.render('index');
 });
 
 app.listen(PORT, () => {

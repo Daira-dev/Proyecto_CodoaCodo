@@ -79,24 +79,26 @@
       <!-- Artículos-->
       <div class="collection">
         <ul class="slider__items">
-          
-          <li class="slider__item">
-            <article class="card-item">
-              <a class="card-item__link" href="../../public/Pages/item.html">
-                <picture class="card-item__cover">
+
+          <% products.forEach(products=> { %>
+            <li class="slider__item">
+              <article class="card-item">
+                <a class="card-item__link" href="/shop/item/<%= products.product_id %>">
+                  <picture class="card-item__cover">
                     <span class="card-item__tag">Nuevo</span>
-                    <img class="card-item__img--front" src="../Assets/Img/star-wars/trooper-1.webp" alt="Coleccionablefigura star-wars">
-                    <img class="card-item__img--back" src="../Assets/Img/star-wars/trooper-box.webp" alt="Coleccionablefigura star-wars, en caja">
-                </picture>
-                <div class="card-item__content">
-                    <p class="card-item__license">STAR WARS</p>
-                    <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-                    <p class="card-item__price">$1799,99</p>
-                    <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
-                </div>
-              </a>
-            </article>
-          </li>
+                    <img class="card-item__img--front" src="<%= products.img_front %>" alt="Figura coleccionable figura de <%= products.product_name %> de <%= products.licence_name %>">
+                    <img class="card-item__img--back" src="<%= products.img_back %>" alt="Figura coleccionable de <%= products.product_name %> de <%= products.licence_name %>, en caja">
+                  </picture>
+                  <div class="card-item__content">
+                    <p class="card-item__license"><%= products.licence_name %></p>
+                    <h4 class="card-item__name"><%= products.product_name %></h4>
+                    <p class="card-item__price">$<%= products.product__price %></p>
+                    <p class="card-item__promo"><%= products.dues %> </p>
+                  </div>
+                </a>
+              </article>
+            </li>
+          <% }) %>
   
           <li class="slider__item">
             <article class="card-item">

@@ -1,3 +1,5 @@
+import products from '../models/products.js';
+
 export const admin = (req, res) => res.render('../src/views/admin');
 
 export const create = (req, res) => res.render('../src/views/create');

@@ -34,34 +34,32 @@
     <!-- Contenido -->
     <main class="container container-item">
       <section class="producto">
+        
         <picture class="producto__cover">
-          <img class="producto__img--front" src="../Assets/Img/star-wars/baby-yoda-1.webp" alt="funko baby yoda">
-          <img class="producto__img--back" src="../Assets/Img/star-wars/baby-yoda-box.webp" alt="funko baby yoda">
+          <img class="producto__img--front" src="<%= products.image_front %>" alt="<%= products.product_description %>>
+          <img class="producto__img--back" src="<%= products.image_back %>" alt="<%= products.product_description %>>
         </picture>
-        <article class="producto__content">
-          <p class="producto__collection">STAR WARS</p>
-          <h3 class="producto__title">BABY YODA BLUEBALL</h3>
-          <p class="producto__description">
-            Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga,
-            edición limitada.
-          </p>
-          <p class="producto__price">$1799,99</p>
-          <div class="producto__contador">
-            <button class="contador__btn" id="sustract">
-              <iconify-icon
-                class="icono-minus"
-                icon="typcn:minus"
-              ></iconify-icon>
-            </button>
-            <input class="contador" type="text" value="0" name="quantity" id="quantity" disabled>
-            <button class="contador__btn" id="add">
-              <iconify-icon class="icono-plus" icon="typcn:plus"></iconify-icon>
-            </button>
 
-            <button class="btn-carrito">Agregar al carrito</button>
+        <article class="producto__content">
+          <p class="producto__collection"><%= products.licence_name %></p>
+          <h3 class="producto__title"><%= products.product_name %></h3>
+          <p class="producto__description"><%= products.product_description %></p>
+          <p class="producto__price"><%= products.producto__price %></p>
+          <div class="producto__contador">
+          <button class="contador__btn" id="sustract">
+            <iconify-icon class="icono-minus" icon="typcn:minus"></iconify-icon>
+          </button>
+          <input class="contador" type="text" value="0" name="quantity" id="quantity" disabled>
+          <button class="contador__btn" id="add">
+            <iconify-icon class="icono-plus" icon="typcn:plus"></iconify-icon>
+          </button>
+
+            <form action="/shop/item/<%= products.product_id %>/add" method="post">
+              <button type="submit" class="btn-carrito">Agregar al carrito</button>
+            </form>
           </div>
           <a href="#" class="producto__metodo-pago">
-            <span class="metodo-pago__span">Ver metodos de pago</span> - 3 CUOTAS SIN INTERES
+            <span class="metodo-pago__span">Ver metodos de pago</span> - <%= products.dues %>
           </a>
         </article>
       </section>
