@@ -1,4 +1,14 @@
-export const home = (req, res) => res.render('../src/views/index.ejs');
+import productModel from '../models/productModel.js';
+
+export const home = async (req, res, next) => {
+    try {
+      const products = await productModel.getAllProducts();
+      res.render('../src/views/index.ejs', { products });
+    } catch (error) {
+      console.error('Error fetching products', error);
+      next(error);
+    }
+  };
 
 export const contact = (req, res) => res.render('../src/views/contact.ejs');
 
