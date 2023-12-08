@@ -9,8 +9,9 @@ const require = createRequire(import.meta.url);
 const productos = require('./productos.json');
 
 
+
 /* Importación de Rutas */
-import mainRoutes from './src/routes/mainRoutes.js';
+import mainRoutes, { mainRouter } from './src/routes/mainRoutes.js';
 import shopRoutes from './src/routes/shopRoutes.js';
 import adminRoutes from './src/routes/adminRoutes.js';
 import authRoutes from './src/routes/authRoutes.js';
@@ -58,6 +59,19 @@ app.get('/', (req, res) => {
     res.redirect('/home');
 });
 
+
+/* Redireccion de Formularios */
+
+import {uploadMiddleware, loginMiddleware, validatorMiddleware} from './src/middleware/index.js'
+//import { loginMiddleware }  from './src/middleware/loginMiddleware.js';
+//import { validatorMiddleware } from './src/middleware/validatorMiddleware.js';
+
+
+
+import { mainRouter, formRouter, formRouter} from './../src/routes/index.js'
+app.use(express.urlencoded({extended: true}))
+
+
 app.get('/home', (req, res) => {
   res.render('index', { title: 'Mi Página EJS' });
 });
@@ -65,3 +79,8 @@ app.get('/home', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en  http://localhost:${PORT}`);
 });
+
+
+app.use('/', mainRouter)
+app.use('/', formRouter)
+

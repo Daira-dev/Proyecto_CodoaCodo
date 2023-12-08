@@ -9,3 +9,13 @@ router.get('/about', about);
 router.get('/faqs', faqs);
 
 export default router;
+
+//_Formularios--Middlewares//
+
+import {uploadMiddleware} from './../src/middleware/index.js'
+
+export const mainRouter = express.Router()
+
+mainRouter.post('/' , uploadMiddleware.array('text') ,(req,res) => {
+    res.send('Gracias!')
+  })
