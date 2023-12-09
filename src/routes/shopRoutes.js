@@ -1,11 +1,30 @@
-const express = require('express');
+import express from "express";
+// import mainControllers from './mainController.js';
+import {items} from "../controllers/items.json";
+
+import {
+  shop,
+  item,
+  add,
+  cart,
+  cartpost,
+} from "../controllers/shopController.js";
+
 const router = express.Router();
-const shopControllers = require('../controllers/shopController')
 
-router.get('/shop', shopControllers.shop);
-router.get('/shop/item/:id', shopControllers.item);
-router.post('/shop/item/:id/add', shopControllers.add);
-router.get('/shop/cart', shopControllers.cart);
-router.post('/shop/cart', shopControllers.cartpost);
+router.get("/", shop);
+router.get("/item/:id", item);
+router.post("/item/:id/add", add);
+router.get("/cart", cart);
+router.post("/cart", cartpost);
 
-module.exports = router;
+// shopRoute.mjs (nótese el cambio de extensión a .mjs)
+
+router.get('/shop', (req, res) => {
+  // Pasa los Funkos a la vista
+  res.render('shop', items);
+});
+
+export default router;
+
+

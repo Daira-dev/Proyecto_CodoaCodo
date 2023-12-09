@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "proyecto_codoacodo",
   "version": "1.0.0",
   "description": "Este es un proyecto como parte del challenge integrador para el curso de NodeJS del Programa Codo a Codo 4.0. 🛸",
@@ -13,6 +14,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "method-override": "^3.0.0",
     "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9"
   }
 }

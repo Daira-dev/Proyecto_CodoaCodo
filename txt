@@ -1,0 +1,7 @@
+// import res from "express/lib/response"
+
+// Profe, le envié por mail.un vídeo de 3 minutos, con la explicación de lo resuelto hasta ahora,  por federalCode. Mission 1,2,3,y 4(hasta donde llegamos)
+
+// export const home = (req, res) => res.render('../src/views/index.ejs');
+
+// export const shop = (req, res) => res.render('../src/views/shop.ejs');

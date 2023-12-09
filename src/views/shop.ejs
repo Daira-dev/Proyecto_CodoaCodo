@@ -68,7 +68,7 @@
 
     <!-- Contenido -->
 <main class="container">
-    <aside class="aside">
+    <!-- <aside class="aside">
           <div>
             <label for="buscar">BUSCAR</label><br>
             <input type="text" placeholder="item o categoria" id="buscar" />
@@ -293,7 +293,16 @@
                     </strong>
             </div>
         </li>
-    </ul>
+    </ul> -->
+
+    <% items.forEach(funko => { %>
+        <div class="funko-item">
+          <h2><%= items.product_name %></h2>
+          <p>Categoría: <%= items.category_name %></p>
+          <p>Precio: $<%= items.product_price.toFixed(2) %></p>
+          <!-- Agrega más detalles según sea necesario -->
+        </div>
+      <% }); %>
   
     <div class="container_pag">
       <ul>

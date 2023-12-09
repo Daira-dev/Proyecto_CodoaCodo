@@ -1,12 +1,20 @@
-const express = require('express');
+import express from "express";
+import {
+  admin,
+  create,
+  createpost,
+  id,
+  idput,
+  remove,
+} from "../controllers/adminController.js";
+
 const router = express.Router();
-const adminControllers = require('../controllers/adminController')
 
-router.get('/admin', adminControllers.admin);
-router.get('/admin/create', adminControllers.create);
-router.post('/admin/create', adminControllers.createpost);
-router.get('/admin/edit/:id', adminControllers.id);
-router.put('/admin/edit/:id', adminControllers.idput);
-router.delete('/admin/delete/:id', adminControllers.delete);
+router.get("/", admin);
+router.get("/create", create);
+router.post("/create", createpost);
+router.get("/edit/:id", id);
+router.put("/edit/:id", idput);
+router.delete("/delete/:id", remove);
 
-module.exports = router;
+export default router;
