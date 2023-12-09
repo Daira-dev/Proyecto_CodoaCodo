@@ -38,12 +38,14 @@ app.use('/shop', shopRoutes);
 app.use('/admin', adminRoutes);
 app.use('/auth', authRoutes);
 
+/* Redirección de formularios */
+import { uploadMiddleware, loginMiddleware, validatorMiddleware } from './src/middleware/index.js'
 
-/* Ícono */
-app.use((req, res, next) => {
-  res.locals.iconPath = path.join(__dirname, '../Assets/Img/branding/isotype.svg');
-  next();
-});
+import { mainRouter, formRouter } from './src/routes/index.js';
+app.use(express.urlencoded({extended: true}))
+
+app.use('/', mainRouter)
+app.use('/', formRouter)
 
 /* Redirección al Home al iniciar el server*/
 app.get('/', (req, res) => {
