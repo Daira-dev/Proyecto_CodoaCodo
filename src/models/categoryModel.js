@@ -1,26 +1,25 @@
-const { conn } = require('/config/conn');
+import pool from '../config/conn.js';
 
-const getCatagory = async () => {
+const categoryModel = {
+  getAllCategories: async () => {
     try {
-        const [rows] = await conn.query('SELECT * FROM category;');
-        const response = {
-            isError: false,
-            data: rows
-        };
-
-        return response;
-    } catch (e) {
-        const error = {
-            isError: true,
-            message: `No pudimos recuperar los datos ${e}.`
-        };
-
-        return error;
-    } finally {
-        await conn.releaseConnection();
+      const [rows, fields] = await pool.query('SELECT * FROM category');
+      return rows;
+    } catch (error) {
+      console.error('Error fetching categories', error);
+      throw error;
     }
-}
+  },
 
-module.exports = {
-    getCatagories
-}
+  getCategoryById: async (categoryId) => {
+    try {
+      const [rows, fields] = await pool.query('SELECT * FROM licence WHERE licence_id = ?', [categoryId]);
+      return rows[0];
+    } catch (error) {
+      console.error('Error fetching category by ID', error);
+      throw error;
+    }
+  },
+};
+
+export default categoryModel;

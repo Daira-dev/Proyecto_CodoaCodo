@@ -36,34 +36,32 @@
         
         <h1 class="titulo">EDITAR ITEM</h1>
 
-        <form class="row gap-0 row-gap-3">
-
+        <form class="row gap-0 row-gap-3" action="/admin/edit/<%= product.product_id %>" method="POST" enctype="application/x-www-form-urlencoded">
           <div class="col-12 d-flex mt-5">
-            <div class="col-5 d-flex align-items-center selector">
-              <label for="categoria">Categoría:</label>
-              <select id="categoria" name="categoria" class="form-select ms-3 border-2">
-                <option value="1" <%= product.category_id === 1 ? 'selected' : '' %>>Funkos</option>
-                <option value="2" <%= product.category_id === 2 ? 'selected' : '' %>>Llaveros</option>
-                <option value="3" <%= product.category_id === 3 ? 'selected' : '' %>>Remeras</option>
-              </select>
-            </div>
-          
-  
-            <div class="col-5 d-flex align-items-center selector">
-              <label class="ms-5" for="licencia">Licencia:</label>
-              <select id="licencia" name="licencia" class="form-select ms-3 border-2">
-                <option value="1" <%= product.licence_id === 1 ? 'selected' : '' %>>Star Wars</option>
-                <option value="2" <%= product.licence_id === 2 ? 'selected' : '' %>>Pokemon</option>
-                <option value="3" <%= product.licence_id === 3 ? 'selected' : '' %>>Harry Potter</option>
-            </select>
-            </div>
+              <div class="col-5 d-flex align-items-center selector">
+                  <label for="categoria">Categoría:</label>
+                  <select id="categoria" name="categoria" class="form-select ms-3 border-2">
+                      <% categories.forEach(category => { %>
+                          <option value="<%= category.category_id %>" <%= product.category_id === category.category_id ? 'selected' : '' %>><%= category.category_name %></option>
+                      <% }); %>
+                  </select>
+              </div>
+      
+              <div class="col-5 d-flex align-items-center selector">
+                  <label class="ms-5" for="licencia">Licencia:</label>
+                  <select id="licencia" name="licencia" class="form-select ms-3 border-2">
+                      <% licences.forEach(licence => { %>
+                          <option value="<%= licence.licence_id %>" <%= product.licence_id === licence.licence_id ? 'selected' : '' %>><%= licence.licence_name %></option>
+                      <% }); %>
+                  </select>
+              </div>
           </div>
-  
+      
           <div class="col-12 input_txt mt-4">
               <label for="nombre">Nombre del producto:</label>
               <input type="text" id="nombre" name="nombre" value="<%= product.product_name %>">
           </div>
-
+          
           <textarea id="descripcion" name="descripcion" rows="5" cols="90" required><%= product.product_description %></textarea><br>
 
           <div class="input_txt_2 col-3 mt-3">
@@ -103,20 +101,21 @@
           </div>  
         
           <div class="d-flex">
-            <div class="col-2 text-center" id="frenteImg" style="display: none;">
-                <img class="border border-danger border-0 border-2 border-bottom" id="previewImage1" width="100%">
+            <div class="col-2 text-center" id="frenteImg">
+                <img class="border border-danger border-0 border-2 border-bottom" id="previewImage1" src="<%= product.img_front %>" width="100%">
                 <p>Frente</p>
             </div>
             
-            <div class="col-2 text-center ms-5" id="dorsoImg" style="display: none;">
-                <img class="border border-danger border-0 border-2 border-bottom" id="previewImage2" width="100%">
+            <div class="col-2 text-center ms-5" id="dorsoImg">
+                <img class="border border-danger border-0 border-2 border-bottom" id="previewImage2" src="<%= product.img_back %>" width="100%">
                 <p>Dorso</p>
             </div>
           </div>
         
-
+          <input type="hidden" name="_method" value="PUT">
+          
           <div class="col-12 mt-4">
-              <input class="btn_1" type="submit" value="Modificar producto">
+            <input class="btn_1" type="submit" value="Modificar producto">
           </div>
 
         </form>
