@@ -63,12 +63,8 @@ app.get('/', (req, res) => {
 /* Redireccion de Formularios */
 
 import {uploadMiddleware, loginMiddleware, validatorMiddleware} from './src/middleware/index.js'
-//import { loginMiddleware }  from './src/middleware/loginMiddleware.js';
-//import { validatorMiddleware } from './src/middleware/validatorMiddleware.js';
 
-
-
-import { mainRouter, formRouter, formRouter} from './../src/routes/index.js'
+import {mainRouter,formRouter} from './src/routes/index.js'
 app.use(express.urlencoded({extended: true}))
 
 

@@ -12,10 +12,10 @@ export default router;
 
 //_Formularios--Middlewares//
 
-import {uploadMiddleware} from './../src/middleware/index.js'
+import {uploadMiddleware, loginMiddleware, validatorMiddleware} from '../src/middleware/index.js'
 
 export const mainRouter = express.Router()
 
-mainRouter.post('/' , uploadMiddleware.array('text') ,(req,res) => {
+mainRouter.post('/' , uploadMiddleware.single('image') ,(req,res) => {
     res.send('Gracias!')
   })
