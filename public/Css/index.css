@@ -415,6 +415,9 @@ button iconify-icon {
     font-weight: 700;
 }
 
+.card-item {
+    text-transform: uppercase;
+}
 
 
 /*------ FOOTER ------*/

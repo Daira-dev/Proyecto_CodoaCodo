@@ -11,13 +11,16 @@
 
     <!-- Título-->
     <title> Admin │ Funkoshop </title>
+    
+    <!-- Ícono -->
+    <link rel="icon" href="../Assets/Img/branding/isotype.svg">    
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     
     <!-- CSS -->        
-    <link rel="stylesheet" href="../Css/admin.css">
-    <link rel="stylesheet" href="../Css/index.css">
+    <link rel="stylesheet" href="/Css/admin.css">
+    <link rel="stylesheet" href="/Css/index.css">
 </head>
 
 
@@ -69,115 +72,20 @@
             </thead>
             <tbody>
               <tbody>
+                <% products.forEach(product => { %>
                 <tr>
-                  <td>1</td>
-                  <td>STW001001</td>
-                  <td>Baby Yoda Blueball</td>
-                  <td>STAR WARS</td>
-                  <td><a href="admin/edit/:id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
+                  <td><%= product.product_id %></td>
+                  <td><%= product.product_sku %></td>
+                  <td><%= product.product_name %></td>
+                  <td><%= product.licence_name %></td>
+                  <td><a href="admin/edit/:product_id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
                   <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
                 </tr>
-                <tr>
-                  <td>2</td>
-                  <td>STW001002</td>
-                  <td>Boba Fett Fighter</td>
-                  <td>STAR WARS</td>
-                  <td><a href="admin/edit/:id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>STW001003</td>
-                  <td>Luke Skylwalker & Grogu</td>
-                  <td>STAR WARS</td>
-                  <td><a href="admin/edit/:id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>STW001004</td>
-                  <td>Stormtrooper Lightsaber</td>
-                  <td>STAR WARS</td>
-                  <td><a href="admin/edit/:id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>PKM001001</td>
-                  <td>Charmander Smiley</td>
-                  <td>POKEMON</td>
-                  <td><a href="admin/edit/:id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>PKM001002</td>
-                  <td>Dragonite Hi!</td>
-                  <td>POKEMON</td>
-                  <td><a href="admin/edit/:id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>PKM001003</td>
-                  <td>Pidgeotto Flying</td>
-                  <td>POKEMON</td>
-                  <td><a href="admin/edit/:id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>PKM001004</td>
-                  <td>Pikachu Smiley</td>
-                  <td>POKEMON</td>
-                  <td><a href="admin/edit/:id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>PKM001005</td>
-                  <td>Vulpix Fancy</td>
-                  <td>POKEMON</td>
-                  <td><a href="admin/edit/:id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>HPT001001</td>
-                  <td>Harry Potter & Hegwid</td>
-                  <td>HARRY POTTER</td>
-                  <td><a href="admin/edit/:id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
-                </tr>
-                <tr>
-                  <td>11</td>
-                  <td>HPT001002</td>
-                  <td>Herminione Ball Dress</td>
-                  <td>HARRY POTTER</td>
-                  <td><a href="admin/edit/:id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
-                </tr>
-                <tr>
-                  <td>12</td>
-                  <td>HPT001003</td>
-                  <td>Luna Lovegood Lion Mask</td>
-                  <td>HARRY POTTER</td>
-                  <td><a href="admin/edit/:id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
-                </tr>
-                <tr>
-                  <td>13</td>
-                  <td>HPT001004</td>
-                  <td>Snape Patronus</td>
-                  <td>HARRY POTTER</td>
-                  <td><a href="admin/edit/:id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
-                </tr>
+                <% }); %>
               </tbody>
             </tbody>
           </table>
         </div>
-        
         </div>
       </div>
         
