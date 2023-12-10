@@ -3,10 +3,16 @@ import pool from '../config/conn.js';
 const productModel = {
   getAllProducts: async () => {
     try {
-      const [rows, fields] = await pool.query('SELECT * FROM products');
+      const [rows, fields] = await pool.query(`
+        SELECT products.*, category.category_name, licence.licence_name
+        FROM products
+        JOIN category ON products.category_id = category.category_id
+        JOIN licence ON products.licence_id = licence.licence_id
+      `);
+
       return rows;
     } catch (error) {
-      console.error('Error encontrando el producto', error);
+      console.error('Error fetching products', error);
       throw error;
     }
   },

@@ -45,7 +45,7 @@
 
       <div class="container">
 
-        <div class="row">
+        <div class="row container_title">
           <div class="col-9">
             <h1 class="titulo">LISTADO DE PRODUCTOS</h1>
           </div>
@@ -64,8 +64,8 @@
               <tr>
                 <th>ID</th>
                 <th>Código</th>
+                <th>Licencia</th>
                 <th>Nombre del Producto</th>
-                <th>Categoría</th>
                 <th></th>
                 <th></th>
               </tr>
@@ -76,16 +76,15 @@
                 <tr>
                   <td><%= product.product_id %></td>
                   <td><%= product.product_sku %></td>
-                  <td><%= product.product_name %></td>
                   <td><%= product.licence_name %></td>
-                  <td><a href="admin/edit/:product_id"><img src="../Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><img src="../Assets/Img/icons/delete_trash.svg" alt="Eliminar"></td>
+                  <td><%= product.product_name %></td>
+                  <td><a href="admin/edit/<%= product.product_id %>"><img src="/Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
+                  <td><a href="admin/delete/<%= product.product_id %>"><img src="/Assets/Img/icons/delete_trash.svg" alt="Eliminar"></a></td>
                 </tr>
                 <% }); %>
               </tbody>
             </tbody>
           </table>
-        </div>
         </div>
       </div>
         

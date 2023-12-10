@@ -1,13 +1,13 @@
 import productModel from '../models/productModel.js';
 
 export const admin = async (req, res) => {
-    try {
-      const products = await productModel.getAllProducts();
-      res.render('../src/views/admin.ejs', { products });
-    } catch (error) {
-      console.error('Error finding products', error);
-      res.status(500).send('Error');
-    }
+  try {
+    const products = await productModel.getAllProducts();
+    res.render('../src/views/admin.ejs', { products });
+  } catch (error) {
+    console.error('Error finding products', error);
+    res.status(500).send('Error');
+  }
 };
 
 export const create = (req, res) => res.render('../src/views/create');
