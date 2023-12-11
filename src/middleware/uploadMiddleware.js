@@ -1,5 +1,9 @@
 import multer from 'multer'
+<<<<<<< HEAD
 import{resolve} from 'path'
+=======
+import {resolve} from 'path'
+>>>>>>> main
 
 const destination=(req,file,cb)=>{
   
@@ -23,8 +27,12 @@ const config={destination,filename}
 
 const storage = multer.diskStorage(config)
 
+<<<<<<< HEAD
 export const uploadMiddleware= multer({storage})
 
 
 
 
+=======
+export const uploadMiddleware= multer({storage})
+>>>>>>> main

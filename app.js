@@ -4,10 +4,6 @@ import methodOverride from 'method-override';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import { createRequire } from 'module'; 
-const require = createRequire(import.meta.url);
-const productos = require('./productos.json');
-
 
 
 /* Importación de Rutas */
@@ -27,19 +23,17 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+/* Carga de archivos estáticos */
+app.use(express.static(path.join(__dirname, 'public')));
+
 /* Motor Plantillas EJS */
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-
-app.use(express.static('public'));
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use(methodOverride('metodo'));
-app.use(methodOverride('put'));
-app.use(methodOverride('delete'));
-
 
 /* Rutas */
 app.use('/', mainRoutes);  
@@ -47,12 +41,14 @@ app.use('/shop', shopRoutes);
 app.use('/admin', adminRoutes);
 app.use('/auth', authRoutes);
 
+/* Redirección de formularios */
+import { uploadMiddleware, loginMiddleware, validatorMiddleware } from './src/middleware/index.js'
 
-/* Ícono */
-app.use((req, res, next) => {
-  res.locals.iconPath = '/Assets/Img/branding/isotype.svg';
-  next();
-});
+import { mainRouter, formRouter } from './src/routes/index.js';
+app.use(express.urlencoded({extended: true}))
+
+app.use('/', mainRouter)
+app.use('/', formRouter)
 
 /* Redirección al Home al iniciar el server*/
 app.get('/', (req, res) => {
