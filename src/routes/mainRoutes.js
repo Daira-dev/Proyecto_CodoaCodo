@@ -1,5 +1,6 @@
 import express from 'express';
 import { home, contact, about, faqs } from '../controllers/mainController.js';
+import { uploadMiddleware } from '../middleware/uploadMiddleware.js';
 
 const router = express.Router();
 
@@ -12,10 +13,6 @@ export default router;
 
 //_Formularios--Middlewares//
 
-import {uploadMiddleware, loginMiddleware, validatorMiddleware} from '../src/middleware/index.js'
-
-export const mainRouter = express.Router()
-
-mainRouter.post('/' , uploadMiddleware.single('image') ,(req,res) => {
-    res.send('Gracias!')
-  })
+app.post('/', uploadMiddleware.single('imagen'), (req,res) =>{
+    res.send('GRACIAS!!')
+})
