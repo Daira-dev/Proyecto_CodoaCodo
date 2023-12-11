@@ -79,7 +79,13 @@
                   <td><%= product.licence_name %></td>
                   <td><%= product.product_name %></td>
                   <td><a href="/admin/edit/<%= product.product_id %>"><img src="/Assets/Img/icons/edit_pencil.svg" alt="Editar"></a></td>
-                  <td><a href="/admin/delete/<%= product.product_id %>"><img src="/Assets/Img/icons/delete_trash.svg" alt="Eliminar"></a></td>
+                  <td>
+                    <form action="/admin/delete/<%= product.product_id %>?_method=DELETE" method="POST">
+                      <button type="submit" style="background: none; border: none;">
+                        <img src="/Assets/Img/icons/delete_trash.svg" alt="Eliminar">
+                      </button>
+                    </form>
+                  </td>
                 </tr>
                 <% }); %>
               </tbody>

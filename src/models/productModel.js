@@ -33,6 +33,27 @@ const productModel = {
       throw error;
     }
   },
+
+  createProduct: async (newProductData) => {
+    try {
+        const [rows] = await pool.query('INSERT INTO products SET ?', [newProductData]);
+        return rows.affectedRows > 0;
+
+    } catch (error) {
+        console.error('Error al crear el producto en el modelo', error);
+        throw error;
+    }
+},
+  deleteProduct: async (productId) => {
+    try {
+      const [result] = await pool.query('DELETE FROM products WHERE product_id = ?', [productId]);
+      return result.affectedRows > 0;
+      
+    } catch (error) {
+      console.error('Error al eliminar el producto en el modelo', error);
+      throw error;
+    }
+  },
 };
 
 export default productModel;
