@@ -11,12 +11,10 @@ const productos = require('./productos.json');
 
 
 /* Importación de Rutas */
-//import mainRoutes, { mainRouter } from './src/routes/mainRoutes.js';
+import mainRoutes from './src/routes/mainRoutes.js';
 import shopRoutes from './src/routes/shopRoutes.js';
 import adminRoutes from './src/routes/adminRoutes.js';
 import authRoutes from './src/routes/authRoutes.js';
-import { loginMiddleware } from './src/middleware/loginMiddleware.js';
-import { validatorMiddleware } from './src/middleware/validatorMiddleware.js';
 
 //console.log(productos);
 
@@ -44,7 +42,7 @@ app.use(methodOverride('delete'));
 
 
 /* Rutas */
-//app.use('/', mainRoutes);  
+app.use('/', mainRoutes);  
 app.use('/shop', shopRoutes);
 app.use('/admin', adminRoutes);
 app.use('/auth', authRoutes);
@@ -64,7 +62,9 @@ app.get('/', (req, res) => {
 
 /* Redireccion de Formularios */
 
-app.post('/form', loginMiddleware, validatorMiddleware, (req,res)=>{
-  console.log(req.body)
-  res.send('subido')
-})
+import { loginMiddleware, validatorMiddleware, uploadMiddleware } from './src/middleware/index.js';
+import { mainRoutes, formRoutes} from './src/routes/index.js'
+
+app.use(express.urlencoded({extended: true}))
+app.use('/', mainRoutes)
+app.use('/', formRoutes)

@@ -13,6 +13,11 @@ export default router;
 
 //_Formularios--Middlewares//
 
-app.post('/', uploadMiddleware.single('imagen'), (req,res) =>{
+
+const mainRouter =express.Routerouter()
+
+
+mainRouter.post('/', uploadMiddleware.single('imagen'), (req,res) =>{
     res.send('GRACIAS!!')
 })
+
