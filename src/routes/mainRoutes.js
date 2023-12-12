@@ -14,7 +14,7 @@ export default router;
 //_Formularios--Middlewares//
 
 
-const mainRouter =express.Routerouter()
+const mainRouter =express.Router()
 
 
 mainRouter.post('/', uploadMiddleware.single('imagen'), (req,res) =>{

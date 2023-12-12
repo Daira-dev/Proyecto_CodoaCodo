@@ -41,14 +41,6 @@ app.use('/shop', shopRoutes);
 app.use('/admin', adminRoutes);
 app.use('/auth', authRoutes);
 
-/* Redirección de formularios */
-import { uploadMiddleware, loginMiddleware, validatorMiddleware } from './src/middleware/index.js'
-
-import { mainRouter, formRouter } from './src/routes/index.js';
-app.use(express.urlencoded({extended: true}))
-
-app.use('/', mainRouter)
-app.use('/', formRouter)
 
 /* Redirección al Home al iniciar el server*/
 app.get('/', (req, res) => {
@@ -59,8 +51,11 @@ app.get('/', (req, res) => {
 /* Redireccion de Formularios */
 
 import { loginMiddleware, validatorMiddleware, uploadMiddleware } from './src/middleware/index.js';
-import { mainRoutes, formRoutes} from './src/routes/index.js'
+import {mainRouter, formRouter} from './src/routes/index.js'
+
+
+
 
 app.use(express.urlencoded({extended: true}))
-app.use('/', mainRoutes)
-app.use('/', formRoutes)
+app.use('/', mainRouter)
+app.use('/', formRouter)
