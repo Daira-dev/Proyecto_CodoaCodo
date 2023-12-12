@@ -21,7 +21,7 @@
 	padding: var(--spacing-12);
 }
 
-.formulario label {
+.rellenar_form label {
 	text-align: right;
 	margin-right: 2em;
     font-size: var(--font-large);
@@ -29,7 +29,7 @@
     margin: 0 10px 20px 0;
 }
 
-.formulario input {
+.rellenar_form input {
     float: right;
     border: none;
     border-bottom: 2px solid var(--primary-solid);
@@ -66,10 +66,6 @@
   
 .mycheck {
     border: 4px solid black;
-}
-
-.sub_text a{
-    text-decoration: none;
 }
 
 
