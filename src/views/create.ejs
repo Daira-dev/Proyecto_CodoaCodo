@@ -37,28 +37,30 @@
         
         <h1 class="titulo">CREAR ITEM</h1>
     
-        <form class="row gap-0 row-gap-3">
+        <form class="row gap-0 row-gap-3" action="/admin/create" method="POST">
     
           <div class="col-12 d-flex mt-5">
             <div class="col-5 d-flex align-items-center selector">
-              <label for="categoria">Categoría:</label>
-              <select id="categoria" name="categoria" class="form-select ms-3 border-2">
-                  <option value="figura">Funkos</option>
-                  <option value="llaveros">Llaveros</option>
-                  <option value="remeras">Remeras</option>
-              </select>
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria" class="form-select ms-3 border-2">
+                    <option value="" disabled selected hidden>Seleccionar</option>
+                    <% categories.forEach(category => { %>
+                        <option value="<%= category.category_id %>"><%= category.category_name %></option>
+                    <% }); %>
+                </select>
             </div>
-    
+        
             <div class="col-5 d-flex align-items-center selector">
-              <label class="ms-5" for="licencia">Licencia:</label>
-              <select id="licencia" name="licencia" class="form-select ms-3 border-2">
-                <option value="pokemon">Pokemon</option>
-                <option value="harrypotter">Harry Potter</option>
-                <option value="starwars">Star Wars</option>
-                <option value="narutoshippuden">Naruto Shippuden</option>
-              </select>
+                <label class="ms-5" for="licencia">Licencia:</label>
+                <select id="licencia" name="licencia" class="form-select ms-3 border-2">
+                    <option value="" disabled selected hidden>Seleccionar</option>
+                    <% licences.forEach(licence => { %>
+                        <option value="<%= licence.licence_id %>"><%= licence.licence_name %></option>
+                    <% }); %>
+                </select>
             </div>
           </div>
+        
     
           <div class="col-12 input_txt mt-4">
               <label for="nombre">Nombre del producto:</label>
@@ -89,9 +91,10 @@
             <div class="col-5 d-flex align-items-center mb-4 selector">
               <label for="cuotas">Cuotas:</label>
               <select id="cuotas" name="cuotas" class="form-select ms-3 border-2">
-                <option value="3cuotas">3 Cuotas sin interes</option>
-                <option value="6cuotas">6 Cuotas sin interes</option>
-                <option value="12cuotas">12 Cuotas sin interes</option>
+                  <option value="3">3 Cuotas sin Interés</option>
+                  <option value="6">6 Cuotas sin Interés</option>
+                  <option value="12">12 Cuotas sin Interés</option>
+                  <option value="24">24 Cuotas sin Interés</option>
               </select>
             </div>
           </div>
@@ -117,7 +120,7 @@
         
     
           <div class="col-12 mt-4">
-              <input class="btn_1" type="submit" value="Crear">
+              <input class="btn_1" type="submit" value="Crear producto">
           </div>
     
         </form>

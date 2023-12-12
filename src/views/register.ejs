@@ -37,32 +37,34 @@
       <h2 class="text-center" id="subtitulo">Completa el formulario para ser parte del mundo de los Funkos</h2>
 
       <div class="formulario justify-content-center">
-        <form action="/form" method="post">
-          <label for="text">Nombre:</label>
-          <input id="nombre" name="nombre" type="text" 
-          placeholder="Max">
-          <br>
-          <label for="text">Apellido:</label>
-          <input id="apellido" name="apellido" type="text" placeholder="Power">
-          <br>
-          <label for="text">Email:</label>
-          <input id="email" name="email" type="text"  placeholder="maxpower@correo.com">
-          <br>
-          <label for="text">Contraseña:</label>
-          <input id="contraseña" name="contraseña" type="password"  placeholder="•••••••••">
-          <br>
-          <label for="text">Repetir Contraseña:</label>
-          <input id="reapeatcontraseña" name="reapeatcontraseña" type="password"  placeholder="•••••••••">  
-        </form>
+        <form action="/auth/register" method="post">
+          <div class="rellenar_form">
+            <label for="name">Nombre:</label>
+            <input id="name" name="name" type="text" placeholder="Max">
+            <br>
+            <label for="lastname">Apellido:</label>
+            <input id="lastname" name="lastname" type="text" placeholder="Power">
+            <br>
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="text" placeholder="maxpower@correo.com">
+            <br>
+            <label for="password">Contraseña:</label>
+            <input id="password" name="password" type="password" placeholder="•••••••••">
+            <br>
+            <label for="reapeatpass">Repetir Contraseña:</label>
+            <input id="reapeatpass" name="reapeatpass" type="password" placeholder="•••••••••">
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn_1">Registrar</button>
+            <label for="aceptoterminos" class="acepto_terminos">
+              <input type="checkbox" id="aceptoterminos" value="si">
+              Acepto <span class="terminos_condiciones">Términos y Condiciones</span>
+            </label>
+          </div>
+        </form>       
       </div>
 
-      <div class="text-center">
-        <button type="submit" class="btn_1">Registrar</button>
-        <label for="aceptoterminos" class="acepto_terminos">
-          <input type="checkbox" ids="aceptoterminos" value="si">
-          Acepto <span class="terminos_condiciones">Términos y Condiciones</span>
-        </label>
-      </div>    
+         
       
     </main>
     <!-- Fin del Contenido -->

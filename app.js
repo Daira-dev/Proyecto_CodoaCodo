@@ -30,7 +30,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use(methodOverride('metodo'));
+app.use(methodOverride('_method'));
+
+app.post('/', uploadMiddleware.single('image'), (req, res) => {
+  res.send('¡Producto actualizado!')
+})
 
 /* Rutas */
 app.use('/', mainRoutes);  
@@ -44,8 +48,8 @@ import { uploadMiddleware, loginMiddleware, validatorMiddleware } from './src/mi
 import { mainRouter, formRouter } from './src/routes/index.js';
 app.use(express.urlencoded({extended: true}))
 
-app.use('/', mainRouter)
-app.use('/', formRouter)
+app.use('/', mainRouter);
+app.use('/', formRouter);
 
 /* Redirección al Home al iniciar el server*/
 app.get('/', (req, res) => {

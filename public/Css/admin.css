@@ -4,6 +4,11 @@
     font-family: var(--base-font);
     font-size: var(--font-large);
     font-weight: 500;
+    max-width: 1150px;
+}
+
+.container_title {
+    max-width: 1150px;
 }
 
 #search {
@@ -19,6 +24,10 @@
     color: #b9b9b9;
 }
 
+.btn__add {
+    justify-content: end;
+}
+
 .btn__add h3 {
     font-family: var(--base-font);
     padding-right: var(--spacing-20);
@@ -28,10 +37,6 @@
 
 .btn__add button {
     background: none;
-}
-
-table {
-    max-width: 1090px;
 }
 
 .table tbody tr {
