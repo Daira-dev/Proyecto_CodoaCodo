@@ -4,6 +4,7 @@ import methodOverride from 'method-override';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import {uploadMiddleware} from './src/middlewares/uploadMiddleware.js'
 
 
 /* Importación de Rutas */
@@ -11,6 +12,8 @@ import mainRoutes from './src/routes/mainRoutes.js';
 import shopRoutes from './src/routes/shopRoutes.js';
 import adminRoutes from './src/routes/adminRoutes.js';
 import authRoutes from './src/routes/authRoutes.js';
+import { loginMiddleware } from './src/middlewares/loginMiddleware.js';
+import { validatorMiddleware } from './src/middlewares/validatorMiddleware.js';
 
 //console.log(productos);
 
@@ -33,7 +36,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use(methodOverride('metodo'));
+app.use(methodOverride('_method'));
+
+//app.post('/', uploadMiddleware.single('image'), (req, res) => {
+  //res.send('¡Producto actualizado!')
+//})
 
 /* Rutas */
 app.use('/', mainRoutes);  
@@ -48,14 +55,30 @@ app.get('/', (req, res) => {
 });
 
 
+
 /* Redireccion de Formularios */
 
-import { loginMiddleware, validatorMiddleware, uploadMiddleware } from './src/middleware/index.js';
-import {mainRouter, formRouter} from './src/routes/index.js'
+//uploadMiddleware//
+app.post('/admin/create', uploadMiddleware.single('imagen'), (req,res) => {
+  res.send('tu imagen ha sido subida!')
+
+})
+
+//login validatorMiddleware//
+
+app.post('/auth/register', loginMiddleware, validatorMiddleware,(req,res) => {
+  console.log(req.body)
+  res.send('subido')
+})
 
 
+app.post('/login', loginMiddleware, validatorMiddleware,(req,res) => {
+  console.log(req.body)
+  res.send('subido')
+})
 
+app.post('/form', loginMiddleware, validatorMiddleware,(req,res) => {
+  console.log(req.body)
+  res.send('subido')
+})
 
-app.use(express.urlencoded({extended: true}))
-app.use('/', mainRouter)
-app.use('/', formRouter)
