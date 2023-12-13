@@ -2,7 +2,29 @@ import userModel from '../models/userModel.js';
 
 export const login = (req, res) => res.render('../src/views/login.ejs');
 
-export const loginpost = (req, res) => res.render('../src/views/admin.ejs');
+export const loginpost = async (req, res) => {
+    const email = req.body.email;
+    const password = req.body.password;
+  
+    try {
+      const user = await userModel.getUser(email, password);
+  
+      if (user) {
+            const PasswordValid = await userModel.comparePassword(password, user.password);
+            if (PasswordValid) {
+                res.send('Inicio de sesión exitoso');
+            } else {
+                res.status(401).send('Contraseña incorrecta');
+            }
+        } else {
+            res.status(401).send('Usuario no registrado');
+        }
+    } catch (error) {
+        console.error('Error al iniciar sesión', error);
+        res.status(500).send('Error interno del servidor');
+    }
+};
+
 
 export const register = (req, res) => res.render('../src/views/register.ejs');
 
