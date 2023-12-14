@@ -68,17 +68,20 @@ app.post('/admin/create', uploadMiddleware.single('imagen'), (req,res) => {
 
 app.post('/auth/register', loginMiddleware, validatorMiddleware,(req,res) => {
   console.log(req.body)
-  res.send('subido')
+  res.send('Ya estas registrado!')
 })
 
 
 app.post('/login', loginMiddleware, validatorMiddleware,(req,res) => {
   console.log(req.body)
-  res.send('subido')
+  res.send('Bienvenido!')
 })
 
 app.post('/form', loginMiddleware, validatorMiddleware,(req,res) => {
   console.log(req.body)
-  res.send('subido')
+  res.send('Tu consulta ha sido recibida! a la brevedad nos estaremos comunicando con vos!')
 })
 
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en  http://localhost:${PORT}`);
+});
