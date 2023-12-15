@@ -44,6 +44,8 @@ const productModel = {
         throw error;
     }
 },
+
+
   deleteProduct: async (productId) => {
     try {
       const [result] = await pool.query('DELETE FROM products WHERE product_id = ?', [productId]);
@@ -55,5 +57,6 @@ const productModel = {
     }
   },
 };
+
 
 export default productModel;

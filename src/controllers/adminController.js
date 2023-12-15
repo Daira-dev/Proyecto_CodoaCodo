@@ -3,7 +3,7 @@ import categoryModel from '../models/categoryModel.js';
 import licenceModel from '../models/licenceModel.js';
 
 
-/* Para cargar todos los producto de la DB */
+// Para cargar todos los producto de la DB 
 export const admin = async (req, res) => {  
   try {
     const products = await productModel.getAllProducts();
@@ -31,7 +31,7 @@ export const create = async (req, res) => {
   }
 };
 
-/* Para crear el nuevo producto y añadirlo a la DB */
+// Para crear el nuevo producto y añadirlo a la DB 
 export const createpost = async (req, res) => { 
   try {
       const newProductData = {
@@ -62,7 +62,7 @@ export const createpost = async (req, res) => {
 };
 
 
-/* Para cargar los datos correspondientes de cada producto */
+// Para cargar los datos correspondientes de cada producto 
 export const edit = async (req, res) => {
   const productId = req.params.product_id;
 
@@ -81,14 +81,14 @@ export const edit = async (req, res) => {
 };
 
 
-/* Para enviar los cambios a la DB */
+// Para enviar los cambios a la DB
 export const editput = (req, res) => {
   const productId = req.params.product_id;
   res.send(`Router for save a product for ID: ${req.params.product_id}`)
 }
 
 
-/* Para eliminar un producto */
+// Para eliminar un producto
 export const remove = async (req, res) => {
   const productId = req.params.product_id;
 

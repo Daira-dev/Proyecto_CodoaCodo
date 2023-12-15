@@ -21,6 +21,7 @@
     <!-- CSS -->        
     <link rel="stylesheet" href="/Css/index.css">
     <link rel="stylesheet" href="/Css/carrito.css">
+
 </head>
 
 
@@ -35,17 +36,18 @@
 
             <h2 class="cart__title"><span>Carrito de Compras</span></h2>
             
-            <section class="cart-name">
-                <h5 class="cart-name__detail">Detalle del Producto</h5>
-                <h5 class="cart-name__detail">Cantidad</h5>
-                <h5 class="cart-name__detail">Total</h5>
-                <h5 class="cart-name__detail"> </h5>
+            <section class="cart-name row">
+                <h5 class="cart-name__detail text-center col-4">Detalle del Producto</h5>
+                <h5 class="cart-name__detail text-center col-5">Cantidad</h5>
+                <h5 class="cart-name__detail text-center col-1">Total</h5>
+                <h5 class="col-2"></h5>
             </section>
 
+
             <ul class="cart__items">
-                <!-- Primer artículo en el carrito -->
-                <li class="cart__item">
-                    <article class="cart-item__article">
+
+                <li class="cart__item row">
+                    <article class="cart-item__article justify-content-center col-4">
                         <picture class="cart-item__image">
                             <img src="/Assets/Img/star-wars/baby-yoda-1.webp" alt="baby-yoda-1">
                         </picture>
@@ -57,46 +59,44 @@
                             <p class="cart-item__price">precio x unidad: $1799.99 %></p>
                         </div>
                     </article>
-                    <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
+                    <form class="item__cart text-center col-5" action="#" method="POST" enctype="application/x-www-form-urlencoded">
                         <button id="subtract" class="item__quantity" type="button">-</button>
-                        <input id="quantity" class="item__input" type="text" name="quantity" placeholder="0">
+                        <input class="contador item__input" type="text" value="1" name="quantity" id="quantity" disabled>
                         <button id="add" class="item__quantity" type="button">+</button>
                     </form>
-                    <div class="cart-price">
-                        <h5>$ 3599,98</h5>
+                    <div class="cart-price text-center col-1">
+                        <h5>$1799.99</h5>
                     </div>
-                    <div class="cart-remove">
-                        <img class="delete-button" src="../Assets/Img/icons/close-icon.svg" alt="Icono de eliminar" data-item-id="1">
-                    </div>
+                    <button type="button" class="cart-remove text-center col-2">
+                        <iconify-icon icon="octicon:x-12"></iconify-icon>
+                    </button>
                 </li>
-                <!-- ---------------------------------- -->
+
                 <li class="cart__item">
                     <article class="cart-item__article">
                         <picture class="cart-item__image">
-                            <img src="../Assets/Img/pokemon/pidgeotto-1.webp" alt="FunkoPop de Pidgeotto de la serie Pokemon">
+                            <img src="/Assets/Img/pokemon/pidgeotto-1.webp" alt="pidgeotto-1">
                         </picture>
                         <div class="cart-item__details">
                             <div class="cart-item__details__text">
                                 <h4 class="cart-item__name">PIDGEOTTO</h4>
                                 <p class="cart-item__licence">POKEMON</p>
                             </div>
-                            <p class="cart-item__price">precio x unidad: $1799,99</p>
+                            <p class="cart-item__price">precio x unidad: $1799.99 %></p>
                         </div>
                     </article>
                     <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
                         <button id="subtract" class="item__quantity" type="button">-</button>
-                        <input id="quantity" class="item__input" type="text" name="quantity" placeholder="0">
+                        <input class="contador item__input" type="text" value="1" name="quantity" id="quantity" disabled>
                         <button id="add" class="item__quantity" type="button">+</button>
                     </form>
                     <div class="cart-price">
-                        <h5>$ 1799,99</h5>
+                        <h5>$1799.99</h5>
                     </div>
-                    <div class="cart-remove">
-                        <a><img  src="../Assets/Img/icons/close-icon.svg" alt="Icono de eliminar"></a>
-                    </div>
+                    <button type="button" class="cart-remove">
+                        <iconify-icon icon="octicon:x-12"></iconify-icon>
+                    </button>
                 </li>
-
-                <!-- Agrega más elementos similares para otros artículos en el carrito -->
 
             </ul>
 
@@ -132,6 +132,8 @@
 </body>
 
 <!-- Scripts -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 <script src="../js/carrito.js"></script>

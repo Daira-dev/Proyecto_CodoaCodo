@@ -10,6 +10,4 @@ router.get('/edit/:product_id', edit);
 router.put('/edit/:product_id', editput);
 router.delete('/delete/:product_id', remove);
 
-
-
 export default router;

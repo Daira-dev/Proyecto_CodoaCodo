@@ -5,23 +5,23 @@ export const login = (req, res) => res.render('../src/views/login.ejs');
 export const loginpost = async (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
-  
+
     try {
-      const user = await userModel.getUser(email, password);
-  
-      if (user) {
-            const PasswordValid = await userModel.comparePassword(password, user.password);
-            if (PasswordValid) {
-                res.send('Inicio de sesión exitoso');
+        const user = await userModel.getUser(email, password);
+
+        if (user) {
+            const passwordValid = userModel.comparePassword(password, user.password);
+            if (passwordValid) {
+                res.render('../src/views/loginpost.ejs');
             } else {
                 res.status(401).send('Contraseña incorrecta');
             }
         } else {
-            res.status(401).send('Usuario no registrado');
+            res.status(401).send('Usuario no registrado o email incorrecto');
         }
     } catch (error) {
         console.error('Error al iniciar sesión', error);
-        res.status(500).send('Error interno del servidor');
+        res.status(500).send('Error interno del servidor: ' + error.message);
     }
 };
 
@@ -39,7 +39,6 @@ export const registerpost = async (req, res) => {
         if (password !== repeatPassword) {
             return res.status(400).send('Las contraseñas no coinciden');
         }
-
         const success = await userModel.createUser(name, lastname, email, password);
 
         if (success) {
