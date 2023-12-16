@@ -1,6 +1,6 @@
 /*------ ESTILOS MAIN DE EDIT & CREATE ------*/
 
-.input_txt input, .input_txt_2 input {
+.input_txt input, .input_txt_1 input, .input_txt_2 input {
     border: none;
     border-bottom: 2px solid var(--primary-solid);
     font-size: 16px; 
@@ -9,14 +9,18 @@
     outline: 0;
 }
 
-.input_txt label, .input_txt_2 label {
+.input_txt label, .input_txt_1 label, .input_txt_2 label {
     font-size: var(--font-large);
     margin: 0 var(--spacing-8) var(--spacing-12) 0;
     clear: left;    
 }
 
-.input_txt_2 input {
+.input_txt_1 input {
     width: 100px;
+}
+
+.input_txt_2 input {
+    width: 80px;
 }
 
 .input_txt_3 {

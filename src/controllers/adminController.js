@@ -31,7 +31,9 @@ export const create = async (req, res) => {
 
 // Para crear el nuevo producto y añadirlo a la DB 
 export const createpost = async (req, res) => { 
+  console.log('Request:', req);
   try {
+
     const newProduct = {
       category_id: req.body.categoria,
       licence_id: req.body.licencia,
@@ -42,10 +44,11 @@ export const createpost = async (req, res) => {
       stock: req.body.stock,
       discount: req.body.descuento,
       dues: req.body.cuotas,
-
-      img_front: req.file ? req.file.filename : '', 
-      img_back: req.file ? req.file.filename : '',
+      img_front: req.files[0] ? `/Assets/Img/img-form/${req.files[0].filename}` : '', 
+      img_back: req.files[1] ? `/Assets/Img/img-form/${req.files[1].filename}` : '',
     };
+    
+    console.log('New product:', newProduct);
 
     const result = await productModel.createProduct(newProduct);
 
@@ -59,7 +62,6 @@ export const createpost = async (req, res) => {
     res.status(500).send('Error interno del servidor');
   }
 };
-
 
 // Para cargar los datos correspondientes de cada producto 
 export const edit = async (req, res) => {

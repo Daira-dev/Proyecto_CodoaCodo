@@ -2,14 +2,13 @@ import multer from 'multer';
 import { resolve } from 'path';
 
 const destination = (req, file, cb) => {
-  file.mimetype === 'image/jpeg'
-    ? cb(null, resolve() + '/public/Assets/image_form')
-    : cb(new Error('Formato de imagen invalido'));
+  file.mimetype === 'image/webp'
+    ? cb(null, resolve() + '/public/Assets/Img/img-form')
+    : cb(new Error('Formato de imagen inválido'));
 };
 
 const filename = (req, file, cb) => {
-  const time = new Date().toString().replace(/ /g, '_').replace(/:/g, '-').slice(0, 33);
-  cb(null, time + '_' + file.originalname);
+  cb(null, file.originalname);
 };
 
 const fileFilter = (req, file, cb) => {

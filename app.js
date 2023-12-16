@@ -22,6 +22,8 @@ const PORT = process.env.PORT || 8080;
 
 /* Carga de archivos estáticos */
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/Assets/Img/img-form', express.static(path.join(__dirname, 'public', 'Assets', 'Img', 'img-form')));
+
 
 /* Motor Plantillas EJS */
 app.set('view engine', 'ejs');
