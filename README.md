@@ -12,10 +12,26 @@ Este es un proyecto como parte del challenge integrador para el curso de NodeJS 
     - Grid
     - Bootstrap
 - JavaScript
+- EJS
+
+## 🛠️ Instalación: 
+```
+$ git clone https://github.com/Daira360/Proyecto_CodoaCodo.git
+$ npm start
+```
+
+**Data Base:**
+- instalar XAMPP en el ordenador
+- Iniciar servidores Apache y MySQL, crear una nueva base funkoshop_g4 e importar ```lorem ipsum``` para su funcionamiento.
 
 
-##### 👨‍💻Integrantes:
+
+## 👨‍💻Integrantes:
 
 - Daira	Barreto
 - Carla	Flores
-- Sasha Nahuel	Rocha
+- Sasha Nahuel Rocha
+
+
+![](public/Assets/Img/branding/logo_light_horizontal.svg)
+
