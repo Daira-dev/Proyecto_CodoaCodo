@@ -22,7 +22,8 @@ $ npm start
 
 **Data Base:**
 - instalar XAMPP en el ordenador
-- Iniciar servidores Apache y MySQL, crear una nueva base funkoshop_g4 e importar ```lorem ipsum``` para su funcionamiento.
+- Iniciar servidores Apache y MySQL, crear una nueva base funkoshop_g4
+- Descargar ```(https://drive.google.com/file/d/16bXyuhSWPddnwKG-QUJOeIVpoO9wWw0z/view?usp=drivesdk)``` e importarlo en el servidor Apache de XAMPP para su funcionamiento
 
 
 
