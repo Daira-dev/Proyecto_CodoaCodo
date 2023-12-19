@@ -36,3 +36,54 @@ function updateTotal() {
     updateTotal();
   });
   
+
+
+  function finalizarCompra() {
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "¡GRACIAS POR SU COMPRA!",
+      showConfirmButton: false,
+      timer: 2000,
+      width: 600,
+      padding: "6em",
+      fontsize: "2em",
+    });
+  }
+  
+  document
+    .querySelector(".checkout-button")
+    .addEventListener("click", function () {
+      finalizarCompra();
+    });
+
+const botonEliminar = document.getElementsByClassName(".cart-remove");
+
+function eliminarProducto(event) {
+  const contenedorProducto = event.target.closest(".cart__item");
+
+  if (contenedorProducto) {
+    contenedorProducto.remove();
+  }
+}
+
+const botonesEliminar = document.querySelectorAll(".cart-remove");
+
+botonesEliminar.forEach(function (boton) {
+  boton.addEventListener("click", eliminarProducto);
+});
+
+
+document.querySelector(".cart-remove").addEventListener("click", borrarDelCarrito);
+
+function borrarDelCarrito(e) {
+  Toastify({
+    text: "PRODUCTO ELIMINADO",
+    duration: 1000,
+    position: "right",
+    gravity: "bottom",
+    style: {
+      background: "linear-gradient(to right, var(--primary-solid), var(--primary-solid))",
+    },
+  }).showToast();
+}

@@ -25,14 +25,14 @@
 
 /* Nombre de columnas */
 .cart-name {
+    width: 100%;
     border-radius: 10px;
     background: #FAFAFF;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     padding: var(--spacing-16);
-    justify-content: space-around;
     align-items: center;
-    margin-bottom: var(--spacing-28);
+    margin-bottom: var(--spacing-24);
 }
 
 .cart-name__detail {
@@ -54,7 +54,7 @@
     background: #FAFAFF;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     display: flex;
-    padding: var(--spacing-16);
+    padding: var(--spacing-16) 0;
     justify-content: space-around;
     align-items: center;
     margin-bottom: var(--spacing-28);
@@ -62,7 +62,7 @@
 
 .cart-item__article {
     display: flex;
-    width: 41rem;
+    padding: var(--spacing-12);
     align-items: center;
     gap: var(--spacing-16);
 }
@@ -71,13 +71,6 @@
 .cart-item__image img {
     max-width: 10rem;
     height: auto;
-}
-
-.cart-item__details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--spacing-20);
 }
 
 .cart-item__details__text {
@@ -104,20 +97,6 @@
     font-weight: 400;
 }
 
-/* celda de quantity de unidades ((VER CÓMO HACER QUE QUEDE CON COLORCITOS)) */
-.cart__quantity {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.cart-quantity__estilos input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-}
-
 /* Total del producto ((SOLO VISUAL X AHORA)) */
 .cart-price {
     font-family: var(--base-font);
@@ -125,20 +104,18 @@
     font-weight: 400;
 }
 
-/*boton eliminar (((PARA CORREGIR)))*/
-.cart-remove img {
-    fill: var(--primary-solid);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    width: var(--spacing-28);
-    height: var(--spacing-28);
+.cart-remove {
+    background: none;
+    border: none;
 }
 
-.cart-remove:hover {
-    color: var(--primary-300);
+.cart-remove iconify-icon {
+    color: var(--primary-solid);
+    font-size: var(--font-large);
+}
+
+.cart-remove iconify-icon:hover {
+    color: var(--primary-900);
 }
 
 
@@ -223,3 +200,26 @@
     background-color: var(--primary-500);
 }
 
+.item__quantity {
+    background-color: var(--primary-solid);
+    padding: 0.15em 0.6em;
+    border: none;
+    font-size: var(--font-medium);
+    font-weight: 500;
+    color: #FAFAFF;
+}
+
+
+  
+.contador {
+    max-width: 80px;
+    max-height: 33px;
+    padding: 8px;
+    text-align: center;
+    font-size: var(--font-small);
+    font-weight: 500;
+}
+
+.contador__btn:hover {
+    background-color: rgb(128, 2, 2);
+}

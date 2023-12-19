@@ -37,7 +37,7 @@
         
         <h1 class="titulo">CREAR ITEM</h1>
     
-        <form class="row gap-0 row-gap-3" action="/admin/create" method="POST">
+        <form class="row gap-0 row-gap-3" action="/admin/create" method="POST" enctype="multipart/form-data">
     
           <div class="col-12 d-flex mt-5">
             <div class="col-5 d-flex align-items-center selector">
@@ -102,7 +102,7 @@
           <div class="col-12 d-flex align-items-center" id="select_img">
             <label for="imagenes">Imágenes:</label>
             <div class="image-preview">
-                <input class="mx-3 m-4" type="file" onchange="showImages(event)" id="imagenes" multiple>
+              <input class="mx-3 m-4" type="file" onchange="showImages(event)" id="imagenes" name="imagenes" multiple>
             </div>
           </div>  
         

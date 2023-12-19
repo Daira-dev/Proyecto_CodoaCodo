@@ -1,6 +1,8 @@
 import { body } from 'express-validator'
 
 export const loginMiddleware = [
-    body('email').isEmail().withMessage('Mail invalido'),
-    body('password').isLength({min:8}).withMessage('Debe tener al menos 8 caracteres')
+    body('email').isEmail().withMessage('Mail inválido'),
+    body('nombre').isLength({min:1}).withMessage('Campo inválido'),
+    body('asunto').isLength({min:1}).withMessage('Campo inválido'),
+    body('mensaje').isLength({min:1}).withMessage('Campo inválido'),
 ]

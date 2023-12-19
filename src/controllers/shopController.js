@@ -29,7 +29,19 @@ export const add = (req, res) => {
   res.send(`Router for add the current item ID: ${req.params.id} to the shop cart`);
 };
 
-export const cart = (req, res) => res.render('../src/views/carrito.ejs');
+export const cart = async (req, res) => {
+  const productId = req.params.product_id;
+  try {
+    const product = await productModel.getProductById(productId);
+    const products = await productModel.getAllProducts();
+
+    res.render('../src/views/carrito.ejs', { product, products });
+  } catch (error) {
+    console.error('Error fetching product details', error);
+    res.status(500).send('Error');
+  }
+};
+
 
 export const cartpost = (req, res) => {
   console.log(req.body);

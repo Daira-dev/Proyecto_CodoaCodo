@@ -56,6 +56,12 @@ app.get('/', (req, res) => {
   res.redirect('/home');
 });
 
+// Formulario Contacto
+app.post('/form', loginMiddleware, validatorMiddleware,(req,res) => {
+  console.log(req.body)
+  res.send('Tu consulta ha sido recibida! a la brevedad nos estaremos comunicando con vos!')
+})
+
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en  http://localhost:${PORT}`);
 });
