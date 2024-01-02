@@ -13,6 +13,9 @@ Este es un proyecto como parte del challenge integrador para el curso de NodeJS 
     - Bootstrap
 - JavaScript
 - EJS
+- Node js
+- Express
+- Mysql
 
 ## 🛠️ Instalación: 
 ```
