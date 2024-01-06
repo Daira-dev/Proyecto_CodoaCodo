@@ -64,23 +64,27 @@
           
           <textarea id="descripcion" name="descripcion" rows="5" cols="90" required><%= product.product_description %></textarea><br>
 
-          <div class="input_txt_2 col-3 mt-3">
+          <div class="input_txt_1 col-3 mt-3">
             <label for="sku">SKU:</label>
-            <input type="text" id="sku" oninput="ajustarTamaño(this)" name="sku" value="<%= product.product_sku %>">
+            <input class="text-center" type="text" id="sku" name="sku" value="<%= product.product_sku %>">
           </div>
+          
           <div class="input_txt_2 col-3 mt-3">
             <label for="precio">Precio:</label>
-            <input type="text" id="precio" oninput="ajustarTamaño(this)" name="precio" value="$<%= product.product_price %>">
+            <span class="h4">$</span>
+            <input class="text-center" type="text" id="precio" name="precio" value="<%= product.product_price %>" onkeypress="enterosDecimales(event)"">
           </div>
+
           <div class="input_txt_2 col-3 mt-3">
             <label for="stock">Stock:</label>
-            <input class="text-center input_txt_3" type="text" id="stock" oninput="ajustarTamaño(this)" name="stock" value="<%= product.stock %>">
+            <input class="text-center input_txt_3" type="text" id="stock" name="stock" value="<%= product.stock %>" onkeypress="soloNumerosEnteros(event)">
           </div>
 
           <div class="col-12 d-flex mt-4">
             <div class="col-3 input_txt_2">
               <label for="descuento">Descuento:</label>
-              <input class="text-center input_txt_3" type="text" id="descuento" oninput="ajustarTamaño(this)" name="descuento" value="<%= product.discount %>%">  
+              <input class="text-center input_txt_3" type="text" id="descuento" name="descuento" value="<%= product.discount %>" onkeypress="enterosDecimales(event)">  
+              <span class="h4">%</span>  
             </div>
           
             <div class="col-5 d-flex align-items-center mb-4 selector">
@@ -97,7 +101,7 @@
           <div class="col-12 d-flex align-items-center" id="select_img">
             <label for="imagenes">Imágenes:</label>
             <div class="image-preview">
-                <input class="mx-3 m-4" type="file" onchange="showImages(event)" id="imagenes" multiple>
+                <input class="mx-3 m-4" type="file" onchange="showImages(event)" id="imagenes" name="images" multiple>
             </div>
           </div>  
         
@@ -132,6 +136,6 @@
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-<script src="/Js/edit.js"></script>
+<script src="/Js/create_edit.js"></script>
 
 </html>

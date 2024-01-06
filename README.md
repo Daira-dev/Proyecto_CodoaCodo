@@ -1,8 +1,10 @@
 ![](public/Assets/Img/branding/logo_light_horizontal.svg)
 
-### Tienda en línea sobre venta de figuras coleccionables Funko Pop!.
+
+### Tienda en línea sobre venta de figuras coleccionables Funko Pop.
 
 Este es un proyecto como parte del challenge integrador para el curso de NodeJS del Programa Codo a Codo 4.0. 🛸
+
 
 ## ⚙️ Lenguajes Utilizados:
 
@@ -16,6 +18,7 @@ Este es un proyecto como parte del challenge integrador para el curso de NodeJS 
 - Node js
 - Express
 - Mysql
+
 
 ## 🛠️ Instalación: 
 ```
@@ -36,5 +39,4 @@ $ npm start
 - Daira	Barreto
 - Carla	Flores
 - Sasha Nahuel Rocha
-
 

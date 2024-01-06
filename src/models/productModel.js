@@ -34,6 +34,16 @@ const productModel = {
     }
   },
 
+  updateProduct: async (productId, updatedProductData) => {
+    try {
+        const [result] = await pool.query('UPDATE products SET ? WHERE product_id = ?', [updatedProductData, productId]);
+        return result.affectedRows > 0;
+    } catch (error) {
+        console.error('Error al actualizar el producto en el modelo', error);
+        throw error;
+    }
+  },
+
   createProduct: async (newProductData) => {
     try {
         const [rows] = await pool.query('INSERT INTO products SET ?', [newProductData]);
@@ -43,7 +53,7 @@ const productModel = {
         console.error('Error al crear el producto en el modelo', error);
         throw error;
     }
-},
+  },
 
 
   deleteProduct: async (productId) => {

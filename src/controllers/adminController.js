@@ -31,7 +31,9 @@ export const create = async (req, res) => {
 
 // Para crear el nuevo producto y añadirlo a la DB 
 export const createpost = async (req, res) => { 
+  console.log('Request:', req);
   try {
+
     const newProduct = {
       category_id: req.body.categoria,
       licence_id: req.body.licencia,
@@ -42,10 +44,11 @@ export const createpost = async (req, res) => {
       stock: req.body.stock,
       discount: req.body.descuento,
       dues: req.body.cuotas,
-
-      img_front: req.file ? req.file.filename : '', 
-      img_back: req.file ? req.file.filename : '',
+      img_front: req.files[0] ? `/Assets/Img/img-form/${req.files[0].filename}` : '', 
+      img_back: req.files[1] ? `/Assets/Img/img-form/${req.files[1].filename}` : '',
     };
+    
+    console.log('New product:', newProduct);
 
     const result = await productModel.createProduct(newProduct);
 
@@ -59,7 +62,6 @@ export const createpost = async (req, res) => {
     res.status(500).send('Error interno del servidor');
   }
 };
-
 
 // Para cargar los datos correspondientes de cada producto 
 export const edit = async (req, res) => {
@@ -81,11 +83,36 @@ export const edit = async (req, res) => {
 
 
 // Para enviar los cambios a la DB
-export const editput = (req, res) => {
+export const editput = async (req, res) => {
   const productId = req.params.product_id;
-  res.send(`Router for save a product for ID: ${req.params.product_id}`)
-}
 
+  try {
+      const updatedProductData = {
+          category_id: req.body.categoria,
+          licence_id: req.body.licencia,
+          product_name: req.body.nombre,
+          product_description: req.body.descripcion,
+          product_sku: req.body.sku,
+          product_price: req.body.precio,
+          stock: req.body.stock,
+          discount: req.body.descuento,
+          dues: req.body.cuotas,
+          img_front: req.body.img_front,
+          img_back: req.body.img_back,
+      };
+
+      const result = await productModel.updateProduct(productId, updatedProductData);
+
+      if (result) {
+          res.redirect('/admin');
+      } else {
+          res.status(500).send('Error al actualizar el producto');
+      }
+  } catch (error) {
+      console.error('Error al procesar la actualización del producto', error);
+      res.status(500).send('Error interno del servidor');
+  }
+};
 
 // Para eliminar un producto
 export const remove = async (req, res) => {
